@@ -10,6 +10,11 @@ var headerHTML = '\
                 <img src="切图/header-logo.png" alt="MG广告平台">\
             </a>\
         </div>\
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">\
+            <span></span>\
+            <span></span>\
+            <span></span>\
+        </button>\
         <nav class="nav-menu">\
             <a href="liuliang-zhu.html" class="nav-link" data-i18n="nav.traffic">流量变现</a>\
             <a href="guanggao-zhu.html" class="nav-link" data-i18n="nav.advertiser">广告主</a>\
@@ -66,6 +71,38 @@ function initHeaderEvents() {
             }
         });
     });
+    
+    // 移动端汉堡菜单切换功能
+    var mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    var navMenu = document.querySelector('.nav-menu');
+    
+    if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // 点击菜单项后关闭菜单（移动端）
+        var navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    mobileMenuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+        
+        // 点击菜单外部区域关闭菜单
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                    mobileMenuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            }
+        });
+    }
 }
 
 // 根据当前页面自动高亮对应的导航项
