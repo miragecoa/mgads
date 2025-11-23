@@ -158,6 +158,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    white-space: nowrap;
 }
 
 .language-text {
@@ -166,6 +167,7 @@
     font-size: 21px;
     max-font-size: 21px;
     color: #1E2543;
+    white-space: nowrap;
 }
 
 .language-arrow {
@@ -392,12 +394,17 @@
     
     .language-selector {
         right: 70px;
-        width: 60px;
-        max-width: 60px;
+        width: 80px;
+        max-width: 80px;
     }
     
     .language-text {
         font-size: 12px;
+        white-space: nowrap;
+    }
+    
+    .language-current {
+        white-space: nowrap;
     }
     
     .language-arrow {
