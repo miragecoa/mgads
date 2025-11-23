@@ -44,6 +44,11 @@ body {
     .section:first-of-type {
         margin-top: 100px;
     }
+    
+    /* 板块6高度减少为原来的1/3 */
+    .section:has(.section-6-content) {
+        height: 720px !important;
+    }
 }
 
 /* 板块1样式 */
@@ -675,7 +680,13 @@ body {
     font-weight: 400; /* 保持字体原有粗细，或者加粗? 样式只说Color */
 }
 
-/* 板块6样式 */
+/* 板块6样式 - 高度减少为原来的1/3 */
+/* 使用更具体的选择器，确保优先级足够高 */
+body section.section:last-of-type {
+    height: 37.5vw !important; /* 720/1920 = 0.375 */
+    max-height: 720px !important;
+}
+
 .section-6-content {
     width: 100%;
     max-width: 1920px;
