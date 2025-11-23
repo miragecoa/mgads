@@ -1,0 +1,937 @@
+@font-face {
+    font-family: 'JiYingHuiPianYuan';
+    src: url('../极影毁片圆.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    overflow-x: hidden;
+}
+
+/* 动画定义 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.section {
+    width: 100%;
+    height: 56.25vw;
+    max-height: 1080px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.section:first-of-type {
+    margin-top: 5.2vw;
+}
+
+.section-7 {
+    height: 27.08vw;
+    max-height: 520px;
+}
+
+/* 板块1样式 */
+.section-1-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-1-text {
+    position: absolute;
+    left: 174px;
+    top: 245px;
+    width: 588px;
+    height: 191px;
+    z-index: 2;
+}
+
+.title-line-1 {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 75px;
+    color: #000000;
+    line-height: 1;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.title-line-1.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title-line-2 {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+.title-line-2.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-black {
+    color: #000000;
+}
+
+.text-blue {
+    color: #0078D7;
+}
+
+.section-1-subtitle {
+    position: absolute;
+    left: 176px;
+    top: 469px;
+    width: 1000px;
+    height: 60px;
+    line-height: 60px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 38px;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+}
+
+.section-1-subtitle.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-1-desc {
+    position: absolute;
+    left: 175px;
+    top: 550px;
+    width: 636px;
+    height: 84px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s;
+}
+
+.section-1-desc.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-1-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 176px;
+    top: 706px;
+    width: 316px;
+    height: 84px;
+    background: #0078D7;
+    text-decoration: none;
+    border-radius: 0;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 1.0s, transform 0.8s ease-out 1.0s;
+}
+
+.section-1-btn.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-text {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+.section-1-image {
+    position: absolute;
+    left: 807px;
+    top: 216px;
+    width: 1005px;
+    height: 587px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s;
+}
+
+.section-1-image.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+    animation: floatUpDown 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.section-1-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 板块2样式 */
+.section-2-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-2-title {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 75px;
+    color: #000000;
+    position: absolute;
+    left: 438px;
+    top: 73px;
+    width: 1037px;
+    height: 70px;
+    line-height: 70px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.section-2-title.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-2-cards {
+    position: absolute;
+    left: 292px;
+    top: 219px;
+    display: flex;
+    gap: 20px;
+}
+
+.section-2-card {
+    position: relative;
+    width: 319px;
+    height: 450px;
+    background-image: url('../切图/广告平台标准/背景/2-框.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.section-2-card:nth-child(1) {
+    transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+.section-2-card:nth-child(2) {
+    transition: opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s;
+}
+
+.section-2-card:nth-child(3) {
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+}
+
+.section-2-card:nth-child(4) {
+    transition: opacity 0.8s ease-out 0.7s, transform 0.8s ease-out 0.7s;
+}
+
+.section-2-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+.section-2-card.animate-in:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.section-2-card.animate-in:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.section-2-card.animate-in:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.section-2-card.animate-in:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.card-2-img {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    display: block;
+    max-height: 60%;
+    max-width: 90%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.card-2-content {
+    position: absolute;
+    top: 51px;
+    left: 31px;
+    z-index: 2;
+}
+
+.card-2-title {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+}
+
+.card-2-line {
+    width: 150px;
+    height: 3px;
+    background: #0078D7;
+    margin-top: 18px;
+    margin-bottom: 16px;
+    margin-left: -8px;
+}
+
+.card-2-value {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 38px;
+    color: #000000;
+}
+
+/* 板块3样式 */
+.section-3-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-3-title {
+    position: absolute;
+    left: 176px;
+    top: 75px; /* 2235 - 2160 = 75 */
+    width: 888px;
+    height: 191px;
+    z-index: 2;
+}
+
+.s3-title-line1 {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 75px;
+    color: #000000;
+    line-height: 1;
+    margin-bottom: 16px; /* Approximate spacing to fit height */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.s3-title-line1.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.s3-title-line2 {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+.s3-title-line2.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-3-desc {
+    position: absolute;
+    left: 175px;
+    top: 380px; /* 2540 - 2160 = 380 */
+    width: 614px;
+    height: 84px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.5;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+}
+
+.section-3-desc.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-3-btn {
+    display: block;
+    position: absolute;
+    left: 176px;
+    top: 536px; /* 2696 - 2160 = 536 */
+    width: 316px;
+    height: 84px;
+    background: #0078D7;
+    text-decoration: none;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s;
+}
+
+.section-3-btn.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.s3-btn-text {
+    position: absolute;
+    left: 41px; /* 217 - 176 = 41 */
+    top: 23px; /* 2719 - 2696 = 23 */
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+.s3-btn-icon {
+    position: absolute;
+    left: 222px; /* 398 - 176 = 222 */
+    top: 14px; /* 2710 - 2696 = 14 */
+    width: 54px;
+    height: 54px;
+    display: block;
+}
+
+#section-3-img {
+    position: absolute;
+    left: 842px;
+    top: 128px; /* 2288 - 2160 = 128 */
+    width: 919px;
+    height: 725px;
+    display: block;
+    z-index: 1;
+}
+
+/* 板块4样式 */
+.section-4 {
+    margin-top: -120px;
+    z-index: 2;
+    position: relative;
+}
+
+.section-4-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-4-title {
+    position: absolute;
+    left: 175px;
+    top: 55px; /* 3175 - (3240 - 120) = 55 */
+    width: 1082px;
+    height: 191px;
+    z-index: 2;
+}
+
+.s4-title-line1 {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 75px;
+    color: #000000;
+    line-height: 1;
+    margin-bottom: 16px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.s4-title-line1.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.s4-title-line2 {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+.s4-title-line2.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-4-desc {
+    position: absolute;
+    left: 175px;
+    top: 360px; /* 3480 - 3120 = 360 */
+    width: 346px;
+    height: 114px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.5;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+}
+
+.section-4-desc.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-4-btn {
+    display: block;
+    position: absolute;
+    left: 176px;
+    top: 516px; /* 3636 - 3120 = 516 */
+    width: 316px;
+    height: 84px;
+    background: #0078D7;
+    text-decoration: none;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s;
+}
+
+.section-4-btn.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.s4-btn-text {
+    position: absolute;
+    left: 41px;
+    top: 23px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+.s4-btn-icon {
+    position: absolute;
+    left: 222px;
+    top: 14px;
+    width: 54px;
+    height: 54px;
+    display: block;
+}
+
+    #section-4-img {
+        position: absolute;
+        left: 600px; /* Adjusted to avoid overlap */
+        top: 250px; /* Adjusted to avoid overlap */
+        width: 1069px;
+        height: 552px;
+        display: block;
+        z-index: 1;
+    }
+
+    /* Section 6 */
+    .section-6 {
+        margin-top: -200px;
+        position: relative;
+        z-index: 3;
+    }
+
+/* 响应式样式 */
+@media screen and (max-width: 1920px) {
+    /* Section 1 */
+    .section-1-text {
+        left: 9.06vw;
+        top: 12.76vw;
+        width: 30.63vw;
+        height: 9.95vw;
+    }
+
+    .title-line-1 {
+        font-size: 3.91vw; /* 75/1920 */
+    }
+
+    .title-line-2 {
+        font-size: 5.21vw; /* 100/1920 */
+    }
+
+    .section-1-subtitle {
+        left: 9.17vw;
+        top: 24.43vw;
+        width: 52.08vw; /* 1000/1920 */
+        height: 3.13vw; /* 60/1920 */
+        line-height: 3.13vw;
+        font-size: 1.98vw; /* 38/1920 */
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .section-1-desc {
+        left: 9.11vw;
+        top: 28.65vw;
+        width: 33.13vw;
+        height: 4.38vw;
+        font-size: 1.30vw; /* 25/1920 */
+    }
+
+    .section-1-btn {
+        left: 9.17vw;
+        top: 36.77vw;
+        width: 16.46vw;
+        height: 4.38vw;
+    }
+
+    .btn-text {
+        font-size: 2.08vw; /* 40/1920 */
+    }
+
+    .section-1-image {
+        left: 42.03vw;
+        top: 11.25vw;
+        width: 52.34vw;
+        height: 30.57vw;
+    }
+
+    /* Section 2 */
+    .section-2-title {
+        font-size: 3.91vw; /* 75/1920 */
+        left: 22.81vw;
+        top: 3.80vw;
+        width: 54.01vw;
+        height: 3.65vw;
+        line-height: 3.65vw;
+    }
+
+    .section-2-cards {
+        left: 15.21vw;
+        top: 11.41vw;
+        gap: 1.04vw;
+    }
+
+    .section-2-card {
+        width: 16.61vw; /* 319/1920 */
+        height: 23.44vw; /* 450/1920 */
+    }
+
+    .card-2-img {
+        right: 0.78vw; /* 15/1920 */
+        bottom: 0.78vw; /* 15/1920 */
+        max-height: 60%;
+        max-width: 90%;
+    }
+
+    .card-2-content {
+        top: 2.66vw; /* 51/1920 */
+        left: 1.61vw; /* 31/1920 */
+    }
+
+    .card-2-title {
+        font-size: 1.30vw; /* 25/1920 */
+    }
+
+    .card-2-line {
+        width: 7.81vw; /* 150/1920 */
+        height: 0.16vw; /* 3/1920 */
+        margin-top: 0.94vw; /* 18/1920 */
+        margin-bottom: 0.83vw; /* 16/1920 */
+        margin-left: -0.42vw; /* -8/1920 */
+    }
+
+    .card-2-value {
+        font-size: 1.98vw; /* 38/1920 */
+    }
+
+    /* Section 3 */
+    .section-3-title {
+        left: 9.17vw;
+        top: 3.91vw;
+        width: 46.25vw;
+        height: 9.95vw;
+    }
+
+    .s3-title-line1 {
+        font-size: 3.91vw; /* 75/1920 */
+        margin-bottom: 0.83vw;
+    }
+
+    .s3-title-line2 {
+        font-size: 5.21vw; /* 100/1920 */
+    }
+
+    .section-3-desc {
+        left: 9.11vw;
+        top: 19.79vw;
+        width: 31.98vw;
+        height: 4.38vw;
+        font-size: 1.30vw;
+    }
+
+    .section-3-btn {
+        left: 9.17vw;
+        top: 27.92vw;
+        width: 16.46vw;
+        height: 4.38vw;
+    }
+
+    .s3-btn-text {
+        left: 2.14vw;
+        top: 1.20vw;
+        font-size: 2.08vw;
+    }
+
+    .s3-btn-icon {
+        left: 11.56vw;
+        top: 0.73vw;
+        width: 2.81vw;
+        height: 2.81vw;
+    }
+
+    #section-3-img {
+        left: 43.85vw; /* 842/1920 */
+        top: 6.67vw; /* 128/1920 */
+        width: 47.86vw; /* 919/1920 */
+        height: 37.76vw; /* 725/1920 */
+    }
+
+    /* Section 4 */
+    .section-4 {
+        margin-top: -6.25vw; /* -120/1920 */
+    }
+
+    .section-4-title {
+        left: 9.11vw;
+        top: 2.86vw; /* 55/1920 */
+        width: 56.35vw;
+        height: 9.95vw;
+    }
+
+    .s4-title-line1 {
+        font-size: 3.91vw;
+        margin-bottom: 0.83vw;
+    }
+
+    .s4-title-line2 {
+        font-size: 5.21vw;
+    }
+
+    .section-4-desc {
+        left: 9.11vw;
+        top: 18.75vw; /* 360/1920 */
+        width: 18.02vw;
+        height: 5.94vw;
+        font-size: 1.30vw;
+    }
+
+    .section-4-btn {
+        left: 9.17vw;
+        top: 26.88vw; /* 516/1920 */
+        width: 16.46vw;
+        height: 4.38vw;
+    }
+
+    .s4-btn-text {
+        left: 2.14vw;
+        top: 1.20vw;
+        font-size: 2.08vw;
+    }
+
+    .s4-btn-icon {
+        left: 11.56vw;
+        top: 0.73vw;
+        width: 2.81vw;
+        height: 2.81vw;
+    }
+
+    #section-4-img {
+        left: 31.25vw; /* 600/1920 */
+        top: 13.02vw; /* 250/1920 */
+        width: 55.68vw; /* 1069/1920 */
+        height: 28.75vw; /* 552/1920 */
+    }
+}
+
+/* 大屏幕字体限制 */
+@media screen and (min-width: 1920px) {
+    .section {
+        height: 1080px;
+    }
+
+    .section:first-of-type {
+        margin-top: 100px;
+    }
+
+    .section-7 {
+        height: 520px;
+    }
+
+    .title-line-1 {
+        font-size: 75px;
+    }
+
+    .title-line-2 {
+        font-size: 100px;
+    }
+
+    .section-1-subtitle {
+        font-size: 38px;
+    }
+
+    .section-1-desc {
+        font-size: 25px;
+    }
+
+    .section-1-btn {
+        font-size: 40px;
+    }
+
+    .section-1-image {
+        width: 1005px;
+        height: 587px;
+        left: 807px;
+        top: 216px;
+    }
+
+    .section-2-title {
+        font-size: 75px;
+    }
+
+    .card-2-title {
+        font-size: 25px;
+    }
+
+    .card-2-value {
+        font-size: 38px;
+    }
+
+    .calc-placeholder {
+        font-size: 25px;
+    }
+
+    .calc-btn-text {
+        font-size: 40px;
+    }
+
+    .calc-desc {
+        font-size: 25px;
+    }
+
+    .s3-title-line1 {
+        font-size: 75px;
+    }
+
+    .s3-title-line2 {
+        font-size: 100px;
+    }
+
+    .section-3-desc {
+        font-size: 25px;
+    }
+
+    .s3-btn-text {
+        font-size: 40px;
+    }
+
+    #section-3-img {
+        width: 919px;
+        height: 725px;
+        left: 842px;
+        top: 128px;
+    }
+
+    .s4-title-line1 {
+        font-size: 75px;
+    }
+
+    .s4-title-line2 {
+        font-size: 100px;
+    }
+
+    .section-4-desc {
+        font-size: 25px;
+    }
+
+    .s4-btn-text {
+        font-size: 40px;
+    }
+
+    #section-4-img {
+        width: 919px;
+        height: 725px;
+        left: 842px;
+        top: 128px;
+    }
+}

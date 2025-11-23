@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'JiYingHuiPianYuan';
+    src: url('../切图/极影毁片圆.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+.section {
+    width: 100%;
+    position: relative;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover; /* Or 100% auto depending on need */
+    overflow: hidden;
+}
+
+.section-1 {
+    width: 100%;
+    height: 980px;
+    top: 0;
+}
+
+.section-2 {
+    width: 100%;
+    height: 1080px;
+    background-image: url('../切图/广告主子页面/背景2.jpg');
+}
+
+.section-3 {
+    width: 100%;
+    height: 1060px;
+    background-image: url('../切图/广告主子页面/背景3.jpg');
+}
+
+.section-4 {
+    width: 100%;
+    height: 410px;
+    background-image: url('../切图/广告主子页面/背景4.jpg');
+}
+
+/* Content Containers */
+.section-1-content,
+.section-2-content,
+.section-3-content,
+.section-4-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Responsive */
+@media screen and (max-width: 1920px) {
+    .section-1 { height: 51.04vw; } /* 980/1920 */
+    .section-2 { height: 56.25vw; } /* 1080/1920 */
+    .section-3 { height: 55.21vw; } /* 1060/1920 */
+    .section-4 { height: 21.35vw; } /* 410/1920 */
+}

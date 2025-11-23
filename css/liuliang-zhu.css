@@ -1,0 +1,1152 @@
+/* 自定义字体 */
+@font-face {
+    font-family: 'JiYingHuiPianYuan';
+    src: url('../切图/极影毁片圆.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "JiYingHuiPianYuan", "SourceHanSansCN", "Source Han Sans CN", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* 板块样式 */
+.section {
+    width: 100%;
+    height: 56.25vw; /* 1080/1920 = 0.5625 */
+    max-height: 1080px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* 第一个板块需要考虑导航栏高度 */
+.section:first-of-type {
+    margin-top: 5.2vw;
+    max-margin-top: 100px;
+}
+
+/* 大屏幕时固定高度 */
+@media screen and (min-width: 1920px) {
+    .section {
+        height: 1080px;
+    }
+
+    .section:first-of-type {
+        margin-top: 100px;
+    }
+}
+
+/* 板块1样式 */
+.section-1-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-1-text {
+    position: absolute;
+    left: 175px;
+    top: 14.4%; /* 155/1080 */
+    max-width: 50%;
+}
+
+/* 小屏幕时使用百分比 */
+@media screen and (max-width: 1920px) {
+    .section-1-text {
+        left: 9.1%; /* 175/1920 */
+    }
+}
+
+.section-1-title {
+    margin: 0;
+    padding: 0;
+}
+
+/* 动画定义 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.title-line-1 {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 3.9vw; /* 75/1920 */
+    color: #000000;
+    line-height: 1.1;
+    margin-bottom: 0.5vw;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.title-line-2 {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 5.2vw; /* 100/1920 */
+    line-height: 1.1;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.text-black {
+    color: #000000;
+    font-weight: normal;
+}
+
+.text-blue {
+    color: #0078D7;
+}
+
+.section-1-desc {
+    margin-top: 1.5vw;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+}
+
+.section-1-desc.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-1-desc p {
+    margin: 0;
+    padding: 0;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 1.25vw; /* 24/1920 */
+    color: #000000;
+    line-height: 1.6;
+}
+
+.section-1-image {
+    position: absolute;
+    right: 100px;
+    top: 36.8%; /* 397/1080 */
+    width: 1000px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s;
+}
+
+.section-1-image.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section-1-image.animate-in img {
+    animation: floatUpDown 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.section-1-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 按钮样式 */
+.section-1-btn {
+    position: absolute;
+    left: 176px;
+    top: 616px;
+    width: 316px;
+    height: 84px;
+    background: #0078D7;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s;
+}
+
+.section-1-btn.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-1-btn:hover {
+    opacity: 0.9;
+}
+
+.btn-text {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #FFFFFF;
+    margin-left: 41px;
+    line-height: 1;
+    width: 155px;
+    white-space: nowrap;
+}
+
+.btn-icon {
+    width: 54px;
+    height: 54px;
+    margin-left: 26px;
+    display: block;
+}
+
+/* 板块2样式 */
+.section-2-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-2-title {
+    position: absolute;
+    left: 175px;
+    top: 156px;
+}
+
+.title-sub {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 75px;
+    color: #000000;
+    line-height: 1;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.title-sub.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title-main {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+.title-main.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title-main span {
+    color: #000000;
+}
+
+.title-main .text-blue {
+    color: #0078D7;
+}
+
+.section-2-desc {
+    position: absolute;
+    left: 176px;
+    top: 460px;
+    width: 914px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.2;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+}
+
+.section-2-desc.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-2-boxes {
+    position: absolute;
+    left: 312px;
+    top: 530px; /* 下移，避免与描述文字重叠 */
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* 框1和框2间隔40px */
+}
+
+.section-2-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.box-img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: none; /* 默认不限制，让图片显示原始尺寸 */
+}
+
+.section-2-text-block {
+    position: absolute;
+    left: 468px;
+    top: 473px; /* 根据坐标计算：1653 - 1236 + 156 = 573，微调 */
+}
+
+.section-2-text-1 {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.5;
+    width: 1093px;
+    max-width: 1093px; /* 限制最大宽度 */
+    margin: 0;
+    position: absolute;
+    left: 156px; /* 468 - 312 = 156，文字在框内的位置 */
+    top: 43px; /* 1653 - 1610 = 43，文字在框内的位置 */
+    z-index: 2; /* 确保文字在图片上方 */
+}
+
+.section-2-text-2 {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.5;
+    width: 1008px;
+    max-width: 1008px; /* 限制最大宽度 */
+    margin: 0;
+    position: absolute;
+    left: 156px; /* 468 - 312 = 156 */
+    top: 43px; /* 1813 - 1610 = 203，但需要根据实际框的位置调整 */
+    z-index: 2; /* 确保文字在图片上方 */
+}
+
+/* 板块3样式 */
+.section-3-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-3-title {
+    position: absolute;
+    left: 175px;
+    top: 156px;
+}
+
+.section-3-desc {
+    position: absolute;
+    left: 176px;
+    top: 460px;
+    width: 535px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000000;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.section-3-desc.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-3-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 46px; /* 预设间距 */
+    position: absolute;
+    top: 540px; /* 上移，给底部留出空间 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.card-item {
+    position: relative;
+    overflow: hidden; /* 裁剪超出部分 */
+    flex-shrink: 0;
+}
+
+.card-frame {
+    display: block;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card-inner {
+    position: absolute;
+    bottom: 2%;
+    right: 2%; /* 右对齐，留出微小空隙 */
+    left: auto; /* 取消左对齐 */
+    transform: none; /* 取消居中 */
+    z-index: 2;
+    width: 65%; /* 约2/3大小，左侧留白1/3 */
+    height: auto;
+}
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-title {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 38px;
+    color: #000000;
+    line-height: 1.1;
+}
+
+.card-line {
+    width: 150px;
+    height: 3px;
+    background: #0078D7;
+    margin: 16px 0 20px 0;
+}
+
+.card-desc {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.4;
+}
+
+/* 板块4样式 */
+.section-4-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-4-title {
+    position: absolute;
+    left: 178px;
+    top: 156px;
+}
+
+.section-4-frames {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    position: absolute;
+    top: 400px; /* 上移 */
+    left: 178px;
+    width: calc(100% - 178px);
+}
+
+.frame-group {
+    position: relative;
+    width: 1564px; /* 左右对称，留出右侧空白 (1920 - 178*2) */
+}
+
+.frame-4-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.frame-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px 15px; /* 减小左右内边距 */
+}
+
+.frame-title {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 38px;
+    color: #000000;
+    line-height: 1;
+}
+
+.frame-line {
+    width: 280px;
+    height: 3px;
+    background: #0078D7;
+    margin: 18px 0 24px 0; /* 根据坐标差值估算 */
+}
+
+.frame-desc {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    width: 1154px; /* 独立设置文字宽度 */
+}
+
+.section-4-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 928px; /* 根据 156(Title) + 772(Gap) 计算 */
+    width: 316px;
+    height: 84px;
+    background: #0078D7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.section-4-btn:hover {
+    opacity: 0.9;
+}
+
+.btn-text-center {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+/* 板块5样式 */
+.section-5-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-5-title {
+    position: absolute;
+    left: 175px;
+    top: 156px;
+}
+
+.section-5-img {
+    position: absolute;
+    left: 662px; /* 666 - 4 */
+    top: 450px;  /* 455 - 5 */
+    width: 570.105px; /* 553.5 * 1.03 = 570.105px */
+    height: auto;
+    max-width: 100%; /* 防止溢出 */
+}
+
+.dashed-line {
+    position: absolute;
+    z-index: 1; /* 放在底层? 或者根据需要调整 */
+}
+
+.dashed-lt {
+    left: 511px; /* 原506 + 5 */
+    top: 517.5px; /* 519.5 - 2 */
+    width: 200px;
+    height: 79px;
+}
+
+.dashed-rt {
+    left: 1203.3px; /* 原1198.3 + 5 */
+    top: 556.1px; /* 558.1 - 2 */
+    width: 137px;
+    height: 49px;
+}
+
+.dashed-lb {
+    left: 511px; /* 原506 + 5 */
+    top: 638.9px; /* 639.9 - 1 */
+    width: 201px;
+    height: 91px;
+}
+
+.s5-block {
+    position: absolute;
+}
+
+.s5-left-1 {
+    left: 226px;
+    top: 447px;
+    width: 379px; /* 根据Title宽度或Body宽度设置 */
+}
+/* 左侧第一块Body宽度是363px，Title是379px。取较大者或对其 */
+/* 为了防止换行问题，可以设置稍宽或者fit-content */
+
+.s5-left-2 {
+    left: 226px;
+    top: 657px;
+    width: 382px;
+}
+
+.s5-right-1 {
+    left: 1347px;
+    top: 517px;
+    width: 353px;
+}
+
+.s5-item-title {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.s5-line {
+    width: 280px;
+    height: 3px;
+    background: #0078D7;
+    margin: 10px 0 13px 0; /* 估算 */
+}
+
+.s5-item-body {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+    line-height: 25px;
+    letter-spacing: 0px; /* 样式中说25px? 可能是行高 */
+}
+
+.text-blue-bold {
+    color: #0078D7;
+    font-weight: 400; /* 保持字体原有粗细，或者加粗? 样式只说Color */
+}
+
+/* 板块6样式 */
+.section-6-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-6-title {
+    position: absolute;
+    left: 369px;
+    top: 156px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 75px;
+    color: #000000;
+    line-height: 1;
+    width: 1182px;
+    white-space: nowrap;
+}
+
+.section-6-card {
+    position: absolute;
+    left: 360px;
+    top: 340px; /* 根据坐标计算：5320 - 5132 + 156 = 344，微调为340 */
+    width: 1200px;
+    height: 160px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: -2px 2px 12px 0px rgba(174, 174, 186, 0.36);
+    overflow: hidden; /* 隐藏超出部分 */
+}
+
+.scroll-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-track {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    animation: scroll-left 30s linear infinite; /* 30秒循环，可根据需要调整速度 */
+    will-change: transform;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* 移动一半距离（第一组logo）后重置 */
+    }
+}
+
+.scroll-img {
+    display: block;
+    flex-shrink: 0;
+}
+
+.scroll-1 {
+    width: 64px;
+    height: 70px;
+    margin-left: 88px; /* 初始位置距离左侧88px */
+    margin-right: 88px; /* 等距间距 */
+}
+
+.scroll-2 {
+    width: 155px;
+    height: 70px;
+    margin-right: 88px; /* 等距间距 */
+}
+
+.scroll-3 {
+    width: 196px;
+    height: 64px;
+    margin-right: 88px; /* 等距间距 */
+}
+
+.scroll-4 {
+    width: 70px;
+    height: 70px;
+    margin-right: 88px; /* 等距间距 */
+}
+
+.scroll-5 {
+    width: 65px;
+    height: 70px;
+    margin-right: 88px; /* 等距间距 */
+}
+
+.scroll-6 {
+    width: 147px;
+    height: 96px;
+    margin-right: 44px; /* 最后一个logo和下一组第一个logo之间的间距（减半） */
+}
+
+/* 小屏幕时使用百分比和vw */
+@media screen and (max-width: 1920px) {
+    .section-1-image {
+        right: 5.2%; /* 100/1920 */
+        width: 52vw; /* 1000/1920 */
+    }
+    
+    /* 按钮响应式 */
+    .section-1-btn {
+        left: 9.17vw; /* 176/1920 */
+        top: 32.08vw; /* 616/1920 */
+        width: 16.46vw; /* 316/1920 */
+        height: 4.38vw; /* 84/1920 */
+    }
+
+    .btn-text {
+        font-size: 2.08vw; /* 40/1920 */
+        margin-left: 2.14vw; /* 41/1920 */
+        width: 8.07vw; /* 155/1920 */
+    }
+
+    .btn-icon {
+        width: 2.81vw; /* 54/1920 */
+        height: 2.81vw;
+        margin-left: 1.35vw; /* 26/1920 */
+    }
+
+    /* 板块2响应式 */
+    .section-2-title {
+        left: 9.11vw; /* 175/1920 */
+        top: 8.13vw; /* 156/1920 */
+    }
+
+    .title-sub {
+        font-size: 3.91vw; /* 75/1920 */
+        margin-bottom: 0.52vw;
+    }
+
+    .title-main {
+        font-size: 5.21vw; /* 100/1920 */
+    }
+
+    .section-2-desc {
+        left: 9.17vw; /* 176/1920 */
+        top: 23.96vw; /* 460/1920 */
+        width: 47.60vw; /* 914/1920 */
+        font-size: 1.30vw; /* 25/1920 */
+    }
+
+    .section-2-boxes {
+        left: 16.25vw; /* 312/1920 */
+        top: 27.60vw; /* 530/1920 */
+        gap: 2.08vw; /* 40/1920 */
+    }
+
+    .section-2-box {
+        max-width: 100%;
+    }
+
+    .box-img {
+        max-width: 68vw; /* 1306/1920 = 68vw, 响应式限制 */
+        height: auto;
+    }
+
+    .section-2-text-block {
+        left: 16.25vw; /* 312/1920，与框对齐 */
+        top: 27.60vw; /* 530/1920 */
+    }
+
+    .section-2-text-1 {
+        font-size: 1.30vw; /* 25/1920 */
+        width: 56.98vw; /* 1093/1920 */
+        left: 8.13vw; /* 156/1920 */
+        top: 2.24vw; /* 43/1920 */
+    }
+
+    .section-2-text-2 {
+        font-size: 1.30vw; /* 25/1920 */
+        width: 52.50vw; /* 1008/1920 */
+        left: 8.13vw; /* 156/1920 */
+        top: 2.24vw; /* 43/1920，第二个框内的相对位置 */
+    }
+
+    /* 板块3响应式 */
+    .section-3-title {
+        left: 9.11vw; /* 175/1920 */
+        top: 8.13vw; /* 156/1920 */
+    }
+
+    .section-3-desc {
+        left: 9.17vw; /* 176/1920 */
+        top: 23.96vw; /* 460/1920 */
+        width: 27.86vw; /* 535/1920 */
+        font-size: 1.30vw; /* 25/1920 */
+    }
+
+    .section-3-cards {
+        gap: 2.4vw; /* 46/1920 */
+        top: 28.13vw; /* 540/1920 */
+    }
+
+    .card-item {
+        width: 25vw; /* 假设宽度，让内部图片自适应 */
+    }
+
+    .card-frame {
+        width: 100%;
+        height: auto;
+    }
+    
+    .card-inner {
+        width: 65%;
+        height: auto;
+    }
+
+    .card-content {
+        padding: 2.08vw 1.56vw; /* 40/1920, 30/1920 */
+    }
+
+    .card-title {
+        font-size: 1.98vw; /* 38/1920 */
+    }
+
+    .card-line {
+        width: 7.81vw; /* 150/1920 */
+        height: 0.16vw; /* 3/1920 */
+        margin: 0.83vw 0 1.04vw 0;
+    }
+
+    .card-desc {
+        font-size: 1.30vw; /* 25/1920 */
+    }
+    /* 板块4响应式 */
+    .section-4-title {
+        left: 9.27vw; /* 178/1920 */
+        top: 8.13vw; /* 156/1920 */
+    }
+
+    .section-4-frames {
+        gap: 2.08vw; /* 40/1920 */
+        top: 20.83vw; /* 400/1920 */
+        left: 9.27vw; /* 178/1920 */
+        width: calc(100% - 9.27vw);
+    }
+
+    .frame-group {
+        width: 81.46vw; /* 1564/1920 */
+    }
+
+    .frame-content {
+        padding: 1.56vw 0.78vw; /* 30, 15 */
+    }
+
+    .frame-title {
+        font-size: 1.98vw; /* 38/1920 */
+    }
+
+    .frame-line {
+        width: 14.58vw; /* 280/1920 */
+        height: 0.16vw; /* 3/1920 */
+        margin: 0.94vw 0 1.25vw 0;
+    }
+
+    .frame-desc {
+        font-size: 1.30vw; /* 25/1920 */
+        width: 60.10vw; /* 1154/1920 */
+    }
+
+    .section-4-btn {
+        top: 48.33vw; /* 928/1920 */
+        width: 16.46vw; /* 316/1920 */
+        height: 4.38vw; /* 84/1920 */
+    }
+
+    .btn-text-center {
+        font-size: 2.08vw; /* 40/1920 */
+    }
+    /* 板块5响应式 */
+    .section-5-title {
+        left: 9.11vw; /* 175/1920 */
+        top: 8.13vw; /* 156/1920 */
+    }
+
+    .section-5-img {
+        left: 34.48vw; /* 662/1920 */
+        top: 23.44vw; /* 450/1920 */
+        width: 29.69vw; /* 570.105/1920 自适应缩放 */
+        max-width: 570.105px; /* 大屏限制最大尺寸 */
+        height: auto;
+    }
+
+    .dashed-lt {
+        left: 26.64vw; /* 511/1920 */
+        top: 26.95vw; /* 517.5/1920 */
+        width: 10.42vw; /* 200/1920 */
+        height: 4.11vw; /* 79/1920 */
+    }
+
+    .dashed-rt {
+        left: 62.67vw; /* 1203.3/1920 */
+        top: 28.96vw; /* 556.1/1920 */
+        width: 7.14vw; /* 137/1920 */
+        height: 2.55vw; /* 49/1920 */
+    }
+
+    .dashed-lb {
+        left: 26.64vw; /* 511/1920 */
+        top: 33.28vw; /* 638.9/1920 */
+        width: 10.47vw; /* 201/1920 */
+        height: 4.74vw; /* 91/1920 */
+    }
+
+    .s5-left-1 {
+        left: 11.77vw; /* 226/1920 */
+        top: 23.28vw; /* 447/1920 */
+        width: 19.74vw; /* 379/1920 */
+    }
+
+    .s5-left-2 {
+        left: 11.77vw; /* 226/1920 */
+        top: 34.22vw; /* 657/1920 */
+        width: 19.90vw; /* 382/1920 */
+    }
+
+    .s5-right-1 {
+        left: 70.16vw; /* 1347/1920 */
+        top: 26.93vw; /* 517/1920 */
+        width: 18.39vw; /* 353/1920 */
+    }
+
+    .s5-item-title {
+        font-size: 1.30vw; /* 25/1920 */
+    }
+
+    .s5-line {
+        width: 14.58vw; /* 280/1920 */
+        height: 0.16vw; /* 3/1920 */
+        margin: 0.52vw 0 0.68vw 0;
+    }
+
+    .s5-item-body {
+        font-size: 0.89vw; /* 17/1920 */
+        line-height: 1.30vw; /* 25/1920 */
+    }
+
+    /* 板块6响应式 */
+    .section-6-title {
+        left: 19.22vw; /* 369/1920 */
+        top: 8.13vw; /* 156/1920 */
+        width: 61.56vw; /* 1182/1920 */
+        font-size: 3.91vw; /* 75/1920 */
+    }
+
+    .section-6-card {
+        left: 18.75vw; /* 360/1920 */
+        top: 17.71vw; /* 340/1920 */
+        width: 62.5vw; /* 1200/1920 */
+        height: 8.33vw; /* 160/1920 */
+        padding: 0 1.04vw; /* 20/1920 */
+    }
+
+    .scroll-1 {
+        width: 3.33vw; /* 64/1920 */
+        height: 3.65vw; /* 70/1920 */
+        margin-left: 4.58vw; /* 88/1920 */
+        margin-right: 4.58vw; /* 88/1920 等距间距 */
+    }
+
+    .scroll-2 {
+        width: 8.07vw; /* 155/1920 */
+        height: 3.65vw; /* 70/1920 */
+        margin-right: 4.58vw; /* 88/1920 等距间距 */
+    }
+
+    .scroll-3 {
+        width: 10.21vw; /* 196/1920 */
+        height: 3.33vw; /* 64/1920 */
+        margin-right: 4.58vw; /* 88/1920 等距间距 */
+    }
+
+    .scroll-4 {
+        width: 3.65vw; /* 70/1920 */
+        height: 3.65vw; /* 70/1920 */
+        margin-right: 4.58vw; /* 88/1920 等距间距 */
+    }
+
+    .scroll-5 {
+        width: 3.39vw; /* 65/1920 */
+        height: 3.65vw; /* 70/1920 */
+        margin-right: 4.58vw; /* 88/1920 等距间距 */
+    }
+
+    .scroll-6 {
+        width: 7.66vw; /* 147/1920 */
+        height: 5.00vw; /* 96/1920 */
+        margin-right: 2.29vw; /* 44/1920 */
+    }
+}
+
+/* 大屏幕限制最大字号 */
+@media screen and (min-width: 1920px) {
+    .title-line-1 {
+        font-size: 75px;
+    }
+
+    .title-line-2 {
+        font-size: 100px;
+    }
+
+    .section-1-desc p {
+        font-size: 24px;
+    }
+    
+    .title-sub {
+        font-size: 75px;
+    }
+
+    .title-main {
+        font-size: 100px;
+    }
+
+    .section-2-desc {
+        font-size: 25px;
+    }
+
+    .section-3-desc {
+        font-size: 25px;
+    }
+
+    .card-title {
+        font-size: 38px;
+    }
+
+    .card-desc {
+        font-size: 25px;
+    }
+
+    .section-6-title {
+        font-size: 75px;
+    }
+
+    /* 限制板块2框和文字的最大尺寸，防止缩放超过100%时变化 */
+    .section-2-boxes {
+        left: 312px;
+        top: 530px;
+        gap: 40px;
+    }
+
+    .section-2-box {
+        max-width: none;
+    }
+
+    .box-img {
+        max-width: 1306px; /* 大屏时限制为固定像素 */
+        height: auto;
+    }
+
+    .section-2-text-1 {
+        font-size: 25px;
+        width: 1093px;
+        max-width: 1093px;
+        left: 156px;
+        top: 43px;
+    }
+
+    .section-2-text-2 {
+        font-size: 25px;
+        width: 1008px;
+        max-width: 1008px;
+        left: 156px;
+        top: 43px;
+    }
+}

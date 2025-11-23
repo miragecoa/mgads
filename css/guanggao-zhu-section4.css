@@ -1,0 +1,136 @@
+/* 动画定义 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 板块4样式 */
+.section-4 {
+    position: relative;
+    width: 100%;
+    height: 600px; /* 设置合适的高度 */
+    background-color: #f8f9fa; /* 可以根据需要调整背景色 */
+}
+
+.section-4-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.section-4-title {
+    position: absolute;
+    left: 444px;
+    top: 112px; /* 3172 - 3060 = 112 (假设section-4从3060px开始) */
+    width: 1200px; /* 增加宽度确保文字不换行 */
+    height: 71px;
+    font-family: Medium, sans-serif;
+    font-weight: 400;
+    font-size: 75px;
+    color: #000000;
+    text-align: left;
+    line-height: 1.0;
+    white-space: nowrap; /* 强制不换行 */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.section-4-title.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-4-btn {
+    position: absolute;
+    left: 747px;
+    top: 268px; /* 3328 - 3060 = 268 */
+    width: 426px;
+    height: 84px;
+    background: #0078D7;
+    border: 2px solid #0078D7;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease, opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.section-4-btn.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-4-btn:hover {
+    background: #106ebe;
+    border-color: #106ebe;
+}
+
+.s4-btn-text {
+    font-family: Medium, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* 响应式样式 */
+@media screen and (max-width: 1920px) {
+    .section-4 {
+        height: 31.25vw; /* 600/1920 */
+    }
+
+    .section-4-title {
+        left: 23.13vw; /* 444/1920 */
+        top: 5.83vw; /* 112/1920 */
+        width: 62.50vw; /* 1200/1920 */
+        height: 3.70vw; /* 71/1920 */
+        font-size: 3.91vw; /* 75/1920 */
+    }
+
+    .section-4-btn {
+        left: 38.91vw; /* 747/1920 */
+        top: 13.96vw; /* 268/1920 */
+        width: 22.19vw; /* 426/1920 */
+        height: 4.38vw; /* 84/1920 */
+    }
+
+    .s4-btn-text {
+        font-size: 2.08vw; /* 40/1920 */
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .section-4 {
+        height: 600px;
+    }
+
+    .section-4-title {
+        left: 444px;
+        top: 112px;
+        width: 1200px; /* 增加宽度确保文字不换行 */
+        height: 71px;
+        font-size: 75px;
+    }
+
+    .section-4-btn {
+        left: 747px;
+        top: 268px;
+        width: 426px;
+        height: 84px;
+    }
+
+    .s4-btn-text {
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,216 @@
+/* 动画定义 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* 板块1样式 */
+.section-1-title {
+    position: absolute;
+    left: 176px;
+    top: 155px;
+    width: 1200px; /* 进一步增加宽度防止缩放时换行 */
+    height: 191px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    color: #000000;
+    line-height: 1.1; /* Adjust line height for better spacing */
+}
+
+.s1-title-line1 {
+    font-size: 75px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.s1-title-line1.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.s1-title-line2 {
+    font-size: 100px;
+    margin-top: 10px; /* Space between lines */
+    white-space: nowrap; /* 强制不换行 */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+.s1-title-line2.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-black {
+    color: #000000;
+}
+
+.text-blue {
+    color: #0078D7;
+}
+
+.section-1-desc {
+    position: absolute;
+    left: 175px;
+    top: 460px;
+    width: 900px; /* Increased width to prevent last word from wrapping */
+    height: 84px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+}
+
+.section-1-desc.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-1-btn {
+    position: absolute;
+    left: 176px;
+    top: 616px;
+    width: 316px;
+    height: 84px;
+    background: #0078D7;
+    border-radius: 10px; /* Consistent radius */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to left roughly */
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s;
+}
+
+.section-1-btn.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.s1-btn-text {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    color: #FFFFFF;
+    margin-left: 41px; /* 217 - 176 = 41px left padding */
+    line-height: 1;
+}
+
+.s1-btn-icon {
+    position: absolute;
+    left: 222px; /* Relative to button? No, user gave abs pos 398. 398 - 176 = 222 */
+    top: 14px; /* 630 - 616 = 14 */
+    width: 54px;
+    height: 54px;
+}
+
+.section-1-image {
+    position: absolute;
+    left: 842px;
+    top: 208px;
+    width: 919px;
+    height: 725px;
+    object-fit: contain;
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s;
+}
+
+.section-1-image.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+    animation: floatUpDown 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+/* Responsive */
+@media screen and (max-width: 1920px) {
+    .section-1-title {
+        left: 9.17vw;
+        top: 8.07vw;
+        width: 62.50vw; /* 1200/1920 */
+        height: 9.95vw;
+    }
+
+    .s1-title-line1 { font-size: 3.91vw; }
+    .s1-title-line2 { font-size: 5.21vw; margin-top: 0.52vw; }
+
+    .section-1-desc {
+        left: 9.11vw;
+        top: 23.96vw;
+        width: 46.88vw; /* 900/1920 - increased width */
+        height: 4.38vw;
+        font-size: 1.30vw;
+    }
+
+    .section-1-btn {
+        left: 9.17vw;
+        top: 32.08vw;
+        width: 16.46vw;
+        height: 4.38vw;
+        border-radius: 0.52vw;
+    }
+
+    .s1-btn-text {
+        font-size: 2.08vw;
+        margin-left: 2.14vw;
+    }
+
+    .s1-btn-icon {
+        left: 11.56vw;
+        top: 0.73vw;
+        width: 2.81vw;
+        height: 2.81vw;
+    }
+
+    .section-1-image {
+        left: 43.85vw;
+        top: 10.83vw;
+        width: 47.86vw;
+        height: 37.76vw;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .section-1-title { width: 1200px; } /* 确保大屏幕下也有足够宽度 */
+    .s1-title-line1 { font-size: 75px; }
+    .s1-title-line2 { font-size: 100px; }
+    .section-1-desc { font-size: 25px; }
+    .s1-btn-text { font-size: 40px; }
+}
+

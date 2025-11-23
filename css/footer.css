@@ -1,0 +1,251 @@
+/* 自定义字体 */
+@font-face {
+    font-family: 'JiYingHuiPianYuan';
+    src: url('../切图/极影毁片圆.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 776px;
+    max-height: 776px !important;
+    background: #000000;
+    position: relative;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .footer {
+        height: 40.4vw; /* 776/1920 */
+        min-height: 400px;
+        max-height: 776px !important;
+    }
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 234px;
+}
+
+/* 小屏幕时使用百分比 */
+@media screen and (max-width: 1600px) {
+    .footer-container {
+        padding: 0 12.2%; /* 234/1920 */
+    }
+}
+
+.footer-logo {
+    position: absolute;
+    left: 180px;
+    top: 120px;
+}
+
+/* 小屏幕时使用百分比 */
+@media screen and (max-width: 1600px) {
+    .footer-logo {
+        left: 9.4%; /* 180/1920 */
+        top: 15.5%; /* 120/776 */
+    }
+}
+
+.footer-logo img {
+    width: 408px;
+    max-width: 408px;
+    height: auto;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .footer-logo img {
+        width: 21.3vw; /* 408/1920 */
+    }
+}
+
+.footer-content {
+    position: absolute;
+    left: 700px;
+    top: 120px;
+    display: flex;
+    gap: 120px;
+}
+
+/* 小屏幕时使用百分比 */
+@media screen and (max-width: 1600px) {
+    .footer-content {
+        left: 36.5%; /* 700/1920 */
+        top: 15.5%; /* 120/776 */
+        gap: 6.25vw; /* 120/1920 */
+    }
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .footer-section {
+        gap: 1.8vw; /* 35/1920 */
+    }
+}
+
+.footer-title {
+    margin: 0;
+    padding: 0;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 38px;
+    max-font-size: 38px;
+    color: #FFFFFF;
+    line-height: 1;
+    text-align: center;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .footer-title {
+        font-size: 2vw; /* 38/1920 */
+    }
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .footer-links {
+        gap: 1.6vw; /* 30/1920 */
+    }
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    max-font-size: 25px;
+    line-height: 1;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.8;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .footer-link {
+        font-size: 1.3vw; /* 25/1920 */
+    }
+}
+
+/* 社交媒体图标 */
+.footer-social {
+    position: absolute;
+    right: 100px;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* 小屏幕时使用百分比 */
+@media screen and (max-width: 1600px) {
+    .footer-social {
+        right: 5.2%; /* 100/1920 */
+        top: 15.5%; /* 120/776 */
+        gap: 2.1vw; /* 40/1920 */
+    }
+}
+
+.social-link {
+    display: block;
+    width: 39px;
+    max-width: 39px;
+    height: 39px;
+    max-height: 39px;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+    opacity: 0.8;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .social-link {
+        width: 2vw; /* 39/1920 */
+        height: 2vw;
+    }
+}
+
+.social-link img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 分隔线 */
+.footer-divider {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 180px;
+    width: 1452px;
+    max-width: 1452px;
+    height: 1px;
+    background: #444444;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .footer-divider {
+        bottom: 9.4vw; /* 180/1920 */
+        width: 75.6vw; /* 1452/1920 */
+    }
+}
+
+/* 版权信息 */
+.footer-copyright {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+    width: 1200px;
+    max-width: 1200px;
+    text-align: center;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #444444;
+    line-height: 25px;
+    letter-spacing: 0.87px;
+    white-space: nowrap;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .footer-copyright {
+        bottom: 4.2vw; /* 80/1920 */
+        width: 62.5vw; /* 1200/1920 */
+        font-size: 0.9vw; /* 17/1920 */
+        line-height: 1.3vw; /* 25/1920 */
+        white-space: normal;
+    }
+}
+

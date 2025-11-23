@@ -1,0 +1,369 @@
+/* 英文版特定样式调整 */
+html[lang="en"] .section-1-subtitle {
+    white-space: normal !important;
+    height: auto !important;
+    line-height: 1.3 !important;
+    width: 950px !important; /* 调整宽度以控制换行点 */
+    overflow: visible !important;
+}
+
+html[lang="en"] .section-1-desc {
+    top: 630px !important;
+}
+
+html[lang="en"] .section-1-btn {
+    top: 786px !important;
+}
+
+/* Section 2 标题居中，在"and"处换行 */
+html[lang="en"] .section-2-title {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 1200px !important; /* 控制宽度让它在"and"处换行 */
+    max-width: 90% !important;
+    text-align: center !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    height: auto !important;
+    word-break: normal !important;
+}
+
+html[lang="en"] .section-2-title.animate-in {
+    transform: translateX(-50%) translateY(0) !important;
+}
+
+/* Section 2 卡片下移 */
+html[lang="en"] .section-2-cards {
+    top: 250px !important; /* 原219px，下移31px */
+}
+
+/* 计算器相关元素下移 */
+html[lang="en"] .calc-input-1 {
+    top: 824px !important; /* 原793px，下移31px */
+}
+
+html[lang="en"] .calc-input-2 {
+    top: 824px !important; /* 原793px，下移31px */
+}
+
+html[lang="en"] .calc-btn {
+    top: 814px !important; /* 原783px，下移31px */
+}
+
+html[lang="en"] .calc-desc {
+    top: 931px !important; /* 原900px，下移31px */
+}
+
+/* Calculate Revenue 按钮文字缩小且不换行 */
+html[lang="en"] .calc-btn-text {
+    font-size: 32px !important; /* 原40px，缩小到32px */
+    white-space: nowrap !important;
+}
+
+/* Section 3 标题调整 */
+html[lang="en"] .section-3-title {
+    width: 900px !important; /* 调整宽度以控制换行 */
+    height: 250px !important; /* 原191px，增加到250px，确保g的下半部分不被裁剪 */
+}
+
+html[lang="en"] .s3-title-line1 {
+    white-space: normal !important;
+    line-height: 1.2 !important;
+}
+
+html[lang="en"] .s3-title-line2 {
+    white-space: normal !important;
+    line-height: 1.3 !important; /* 增加行高给g的下半部分留空间 */
+    width: 800px !important; /* 限制宽度让"and seamless access to high-value users"只换2行 */
+    font-size: 85px !important; /* 原100px，缩小到85px */
+    max-height: 221px !important; /* 增加高度 (85px * 1.3 * 2 = 221px) */
+    overflow: visible !important; /* 改为visible，允许g的下半部分显示 */
+}
+
+/* Section 3 描述文字和按钮下移 */
+html[lang="en"] .section-3-desc {
+    top: 410px !important; /* 原380px，下移30px */
+}
+
+html[lang="en"] .section-3-btn {
+    top: 566px !important; /* 原536px，下移30px */
+}
+
+/* Section 3 按钮文字缩小 */
+html[lang="en"] .s3-btn-text {
+    font-size: 32px !important; /* 原40px，缩小到32px */
+}
+
+/* Section 4 标题调整 */
+html[lang="en"] .section-4-title {
+    width: 900px !important; /* 调整宽度以控制换行 */
+    height: 250px !important; /* 原191px，增加到250px，确保g的下半部分不被裁剪 */
+}
+
+html[lang="en"] .s4-title-line1 {
+    white-space: nowrap !important; /* 不换行 */
+    line-height: 1.2 !important;
+}
+
+html[lang="en"] .s4-title-line2 {
+    white-space: normal !important;
+    line-height: 1.3 !important; /* 增加行高给g的下半部分留空间 */
+    width: 750px !important; /* 调整宽度让"and significantly increase your game's revenue"只换2行 */
+    font-size: 75px !important; /* 原100px，缩小到75px */
+    max-height: 250px !important; /* 增加高度确保2行文字完整显示 */
+    overflow: visible !important; /* 改为visible，确保所有文字显示 */
+}
+
+/* Section 4 描述文字和按钮下移 */
+html[lang="en"] .section-4-desc {
+    top: 450px !important; /* 原360px，下移90px，确保不重叠 */
+}
+
+html[lang="en"] .section-4-btn {
+    top: 740px !important; /* 原516px，下移224px，确保与body文字不重叠 */
+}
+
+/* Section 4 按钮文字缩小 */
+html[lang="en"] .s4-btn-text {
+    font-size: 32px !important; /* 原40px，缩小到32px */
+}
+
+/* Section 5 标题居中且不换行 */
+html[lang="en"] .section-5-title {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
+    max-width: 90% !important;
+    white-space: nowrap !important;
+}
+
+html[lang="en"] .section-5-title.animate-in {
+    transform: translateX(-50%) translateY(0) !important;
+}
+
+/* Section 6 标题居中，在"on the Microsoft S"处换行 */
+html[lang="en"] .section-6-title {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 1200px !important; /* 控制宽度让它在"on the Microsoft S"处换行 */
+    max-width: 90% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+    height: auto !important;
+}
+
+html[lang="en"] .section-6-title.animate-in {
+    transform: translateX(-50%) translateY(0) !important;
+}
+
+/* Section 7 标题居中 */
+html[lang="en"] .section-7-title {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
+    max-width: 90% !important;
+    white-space: nowrap !important;
+}
+
+html[lang="en"] .section-7-title.animate-in {
+    transform: translateX(-50%) translateY(0) !important;
+}
+
+/* Section 7 按钮文字缩小 */
+html[lang="en"] .join-btn-1-text {
+    font-size: 32px !important; /* 原40px，缩小到32px */
+}
+
+html[lang="en"] .join-btn-2-text {
+    font-size: 28px !important; /* 原40px，缩小到28px */
+}
+
+/* Section 7 底部文本缩小 */
+html[lang="en"] .section-7-text {
+    font-size: 32px !important; /* 原38px，缩小到32px */
+}
+
+@media screen and (max-width: 1920px) {
+    html[lang="en"] .section-1-subtitle {
+        white-space: normal !important;
+        height: auto !important;
+        line-height: 1.3 !important;
+        width: 49.48vw !important; /* 950/1920 */
+        overflow: visible !important;
+    }
+    
+    html[lang="en"] .section-1-desc {
+        top: 32.81vw !important;
+    }
+    
+    html[lang="en"] .section-1-btn {
+        top: 40.94vw !important;
+    }
+    
+    html[lang="en"] .section-2-title {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 62.5vw !important; /* 1200/1920 */
+        max-width: 90% !important;
+        text-align: center !important;
+        white-space: normal !important;
+        line-height: 1.2 !important;
+        height: auto !important;
+        word-break: normal !important;
+    }
+    
+    html[lang="en"] .section-2-title.animate-in {
+        transform: translateX(-50%) translateY(0) !important;
+    }
+    
+    html[lang="en"] .section-2-cards {
+        top: 13.02vw !important; /* 250/1920 */
+    }
+    
+    html[lang="en"] .calc-input-1 {
+        top: 42.92vw !important; /* 824/1920 */
+    }
+    
+    html[lang="en"] .calc-input-2 {
+        top: 42.92vw !important; /* 824/1920 */
+    }
+    
+    html[lang="en"] .calc-btn {
+        top: 42.40vw !important; /* 814/1920 */
+    }
+    
+    html[lang="en"] .calc-desc {
+        top: 48.49vw !important; /* 931/1920 */
+    }
+    
+    html[lang="en"] .calc-btn-text {
+        font-size: 1.67vw !important; /* 32/1920 */
+        white-space: nowrap !important;
+    }
+    
+    html[lang="en"] .section-3-title {
+        width: 46.88vw !important; /* 900/1920 */
+        height: 13.02vw !important; /* 250/1920 */
+    }
+    
+    html[lang="en"] .s3-title-line1 {
+        white-space: normal !important;
+        line-height: 1.2 !important;
+    }
+    
+    html[lang="en"] .s3-title-line2 {
+        white-space: normal !important;
+        line-height: 1.3 !important; /* 增加行高给g的下半部分留空间 */
+        width: 41.67vw !important; /* 800/1920 */
+        font-size: 4.43vw !important; /* 85/1920 */
+        max-height: 11.51vw !important; /* 221/1920 */
+        overflow: visible !important; /* 改为visible，允许g的下半部分显示 */
+    }
+    
+    html[lang="en"] .section-3-desc {
+        top: 21.35vw !important; /* 410/1920 */
+    }
+    
+    html[lang="en"] .section-3-btn {
+        top: 29.48vw !important; /* 566/1920 */
+    }
+    
+    html[lang="en"] .s3-btn-text {
+        font-size: 1.67vw !important; /* 32/1920 */
+    }
+    
+    html[lang="en"] .section-4-title {
+        width: 46.88vw !important; /* 900/1920 */
+        height: 13.02vw !important; /* 250/1920 */
+    }
+    
+    html[lang="en"] .s4-title-line1 {
+        white-space: nowrap !important; /* 不换行 */
+        line-height: 1.2 !important;
+    }
+    
+    html[lang="en"] .s4-title-line2 {
+        white-space: normal !important;
+        line-height: 1.3 !important; /* 增加行高给g的下半部分留空间 */
+        width: 39.06vw !important; /* 750/1920 */
+        font-size: 3.91vw !important; /* 75/1920 */
+        max-height: 13.02vw !important; /* 250/1920 */
+        overflow: visible !important; /* 改为visible，确保所有文字显示 */
+    }
+    
+    html[lang="en"] .section-4-desc {
+        top: 23.44vw !important; /* 450/1920 */
+    }
+    
+    html[lang="en"] .section-4-btn {
+        top: 38.54vw !important; /* 740/1920 */
+    }
+    
+    html[lang="en"] .s4-btn-text {
+        font-size: 1.67vw !important; /* 32/1920 */
+    }
+    
+    html[lang="en"] .section-5-title {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: auto !important;
+        max-width: 90% !important;
+        white-space: nowrap !important;
+    }
+    
+    html[lang="en"] .section-5-title.animate-in {
+        transform: translateX(-50%) translateY(0) !important;
+    }
+    
+    html[lang="en"] .section-6-title {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 62.5vw !important; /* 1200/1920 */
+        max-width: 90% !important;
+        white-space: normal !important;
+        text-align: center !important;
+        line-height: 1.2 !important;
+        height: auto !important;
+    }
+    
+    html[lang="en"] .section-6-title.animate-in {
+        transform: translateX(-50%) translateY(0) !important;
+    }
+    
+    html[lang="en"] .section-7-title {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: auto !important;
+        max-width: 90% !important;
+        white-space: nowrap !important;
+    }
+    
+    html[lang="en"] .section-7-title.animate-in {
+        transform: translateX(-50%) translateY(0) !important;
+    }
+    
+    html[lang="en"] .join-btn-1-text {
+        font-size: 1.67vw !important; /* 32/1920 */
+    }
+    
+    html[lang="en"] .join-btn-2-text {
+        font-size: 1.46vw !important; /* 28/1920 */
+    }
+    
+    html[lang="en"] .section-7-text {
+        font-size: 1.67vw !important; /* 32/1920 */
+    }
+    
+    /* Footer 内容调整，避免与左右两侧重叠 */
+    html[lang="en"] .footer-content {
+        left: 31.25vw !important; /* 600/1920 */
+        gap: 4.17vw !important; /* 80/1920 */
+    }
+}
+
+/* Footer 内容调整，避免与左右两侧重叠 */
+html[lang="en"] .footer-content {
+    left: 600px !important; /* 原700px，左移100px，避免与右侧图标重叠 */
+    gap: 80px !important; /* 原120px，减小间距 */
+}

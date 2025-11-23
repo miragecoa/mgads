@@ -1,0 +1,281 @@
+/* 动画定义 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 板块7样式 - 加入我们 */
+.section-7 {
+    height: 520px; /* Fixed height as per user instruction */
+    position: relative;
+}
+
+.section-7-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 标题 */
+.section-7-title {
+    position: absolute;
+    left: 551px;
+    top: 72px; /* Mapped from 5912px */
+    width: 813px;
+    height: 71px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 75px;
+    color: #000000;
+    line-height: 71px;
+    white-space: nowrap;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.section-7-title.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 按钮1 - 高价值流量入口 */
+.join-btn-1 {
+    position: absolute;
+    left: 420px;
+    top: 228px; /* Mapped from 6068px */
+    width: 426px;
+    height: 84px;
+    background: #0078D7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    /* No border radius specified in prompt? 
+       Looking at previous buttons (Section 1), they usually have radius.
+       The prompt for this one doesn't explicitly say radius, but standard practice?
+       Wait, prompt for btn 2 doesn't say radius either.
+       Prompt for Input says "圆角10px".
+       Let's assume 0 or standard?
+       Looking at "矩形 2 拷贝 2", standard rectangles might have corners.
+       Section 1 button had radius? No, prompt said "316px 84px #0078D7".
+       Let's check liuliang-zhu button... usually 10px.
+       Let's stick to NO radius if not specified, OR match the style of the page.
+       Actually, previous buttons in index.html (calc-btn) have 10px.
+       I will check the prompt again.
+       "圆角10px" is EXPLICITLY mentioned for the Input field ("矩形 2 拷贝 7").
+       It is NOT mentioned for the buttons.
+       However, Section 1 button logic was similar.
+       I'll check Section 1 button style in index.css.
+    */
+    border-radius: 10px; /* Consistent with other buttons */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+.join-btn-1.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.join-btn-1-text {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+/* 按钮2 - 高效变现入口 */
+.join-btn-2 {
+    position: absolute;
+    left: 1075px;
+    top: 228px; /* Mapped from 6068px */
+    width: 426px;
+    height: 84px;
+    background: rgba(0,120,215,0);
+    border: 2px solid #0078D7;
+    box-sizing: border-box; /* Ensure border is inside dimensions */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px; /* Consistent with other buttons */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s;
+}
+
+.join-btn-2.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.join-btn-2-text {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    color: #0078D7;
+}
+
+/* 底部文本 */
+.section-7-text {
+    position: absolute;
+    left: 367px;
+    top: 428px; /* Mapped from 6268px */
+    width: 702px;
+    height: 36px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 38px; /* Prompt says 37.5px size and 38px in code block */
+    color: #000000;
+    line-height: 36px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+}
+
+.section-7-text.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 邮箱输入框容器 */
+.email-input-box {
+    position: absolute;
+    left: 1126px;
+    top: 413px; /* Mapped from 6253px */
+    width: 426px;
+    height: 64px;
+    background: rgba(255,255,255,0.8);
+    box-shadow: -2px 2px 5px 0px #EAEAF2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 19px; /* Based on text position 1145 - 1126 = 19 */
+}
+
+.email-input {
+    width: 300px; /* Leave space for icon */
+    height: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #7B7B7B;
+}
+
+.email-input::placeholder {
+    color: #C1CDDC; /* Optional: based on "请输入您的邮箱" initial color before overlay */
+}
+
+/* 邮箱图标 */
+.email-icon {
+    position: absolute;
+    left: 1492px;
+    top: 418px; /* Mapped from 6258px */
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+}
+
+/* 响应式 */
+@media screen and (max-width: 1920px) {
+    .section-7 {
+        height: 27.08vw; /* 520px */
+    }
+
+    .section-7-title {
+        left: 28.70vw;
+        top: 3.75vw;
+        width: 42.34vw;
+        height: 3.70vw;
+        font-size: 3.91vw;
+        line-height: 3.70vw;
+    }
+
+    .join-btn-1 {
+        left: 21.88vw;
+        top: 11.88vw;
+        width: 22.19vw;
+        height: 4.38vw;
+        border-radius: 0.52vw;
+    }
+
+    .join-btn-1-text {
+        font-size: 2.08vw;
+    }
+
+    .join-btn-2 {
+        left: 55.99vw;
+        top: 11.88vw;
+        width: 22.19vw;
+        height: 4.38vw;
+        border-radius: 0.52vw;
+        border-width: 0.10vw;
+    }
+
+    .join-btn-2-text {
+        font-size: 2.08vw;
+    }
+
+    .section-7-text {
+        left: 19.11vw;
+        top: 22.29vw;
+        width: 36.56vw;
+        height: 1.88vw;
+        font-size: 1.98vw;
+        line-height: 1.88vw;
+    }
+
+    .email-input-box {
+        left: 58.65vw;
+        top: 21.51vw;
+        width: 22.19vw;
+        height: 3.33vw;
+        border-radius: 0.52vw;
+        padding-left: 0.99vw;
+    }
+
+    .email-input {
+        width: 15.63vw;
+        font-size: 1.30vw;
+    }
+
+    .email-icon {
+        left: 77.71vw;
+        top: 21.77vw;
+        width: 2.81vw;
+        height: 2.81vw;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .section-7-title {
+        font-size: 75px;
+    }
+    .join-btn-1-text, .join-btn-2-text {
+        font-size: 40px;
+    }
+    .section-7-text {
+        font-size: 38px;
+    }
+    .email-input {
+        font-size: 25px;
+    }
+}
+

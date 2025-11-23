@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广告平台标准 - MG广告平台</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css?v=1.0">
+    <link rel="stylesheet" href="css/index-calc.css?v=1.0">
+    <link rel="stylesheet" href="css/index-carousel.css?v=1.5">
+    <link rel="stylesheet" href="css/index-case.css?v=1.2">
+    <link rel="stylesheet" href="css/index-join.css?v=1.0">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link rel="stylesheet" href="css/index-en-fix.css?v=1.0">
+    <link rel="stylesheet" href="css/footer-en-fix.css">
+    <!-- Languages and i18n -->
+    <script src="js/languages.js"></script>
+    <script src="js/i18n.js"></script>
+</head>
+<body data-page="index">
+    <!-- 引入Header组件 -->
+    <div id="header-placeholder"></div>
+
+    <!-- 板块1 -->
+    <section class="section section-1" style="background-image: url('切图/广告平台标准/背景/1.jpg');">
+        <div class="section-1-content">
+            <div class="section-1-text">
+                <h1 class="section-1-title">
+                    <div class="title-line-1" data-i18n="index.s1_title_line1">你专注创作</div>
+                    <div class="title-line-2">
+                        <span class="text-black" data-i18n="index.s1_title_line2">我们助你变现</span>
+                    </div>
+                </h1>
+            </div>
+            <div class="section-1-subtitle" data-i18n="index.s1_subtitle">MG Ads是Win10/Win11全球广告聚合平台</div>
+            <div class="section-1-desc" data-i18n="index.s1_desc">
+                作为微软全球顶级合作伙伴之一 MG Ads能帮助你一站式解决微软应用商店内流量变现难题 助你高效且便捷地实现全球化增长
+            </div>
+            <a href="https://developer.ad.mguwp.net" class="section-1-btn" target="_blank">
+                <span class="btn-text" data-i18n="index.s1_btn">立即开始</span>
+            </a>
+            <div class="section-1-image">
+                <img src="切图/广告平台标准/图1/图1-1.png" alt="MG Ads平台">
+            </div>
+        </div>
+    </section>
+
+    <!-- 板块2 -->
+    <section class="section section-2" style="background-image: url('切图/广告平台标准/背景/2.jpg');">
+        <div class="section-2-content">
+            <div class="section-2-title" data-i18n="index.s2_title">把握高价值流量，收入突飞猛进</div>
+            <div class="section-2-cards">
+                <div class="section-2-card">
+                    <div class="card-2-content">
+                        <div class="card-2-title" data-i18n="index.s2_card1_title">总用户量</div>
+                        <div class="card-2-line"></div>
+                        <div class="card-2-value"><span data-i18n="index.s2_card1_value">8363</span><span class="text-blue" data-i18n="index.s2_card1_unit">万</span></div>
+                    </div>
+                    <img src="切图/广告平台标准/2图-1.png" class="card-2-img" alt="图标1">
+                </div>
+                <div class="section-2-card">
+                    <div class="card-2-content">
+                        <div class="card-2-title" data-i18n="index.s2_card2_title">全球开发者</div>
+                        <div class="card-2-line"></div>
+                        <div class="card-2-value">4537<span class="text-blue">+</span></div>
+                    </div>
+                    <img src="切图/广告平台标准/2图-2.png" class="card-2-img" alt="图标2">
+                </div>
+                <div class="section-2-card">
+                    <div class="card-2-content">
+                        <div class="card-2-title" data-i18n="index.s2_card3_title">广告展示量</div>
+                        <div class="card-2-line"></div>
+                        <div class="card-2-value">262,396,588<span class="text-blue">+</span></div>
+                    </div>
+                    <img src="切图/广告平台标准/2图-3.png" class="card-2-img" alt="图标3">
+                </div>
+                <div class="section-2-card">
+                    <div class="card-2-content">
+                        <div class="card-2-title" data-i18n="index.s2_card4_title">填充率</div>
+                        <div class="card-2-line"></div>
+                        <div class="card-2-value" data-i18n="index.s2_card4_value">高</div>
+                    </div>
+                    <img src="切图/广告平台标准/2图-4.png" class="card-2-img" alt="图标4">
+                </div>
+            </div>
+            
+            <!-- 收益计算器 -->
+            <div class="calc-input-1">
+                <input type="number" id="dau-input" class="calc-input-field" placeholder="请输入DAU值" data-i18n="index.s2_calc_input">
+            </div>
+            <div class="calc-input-2">
+                <span id="revenue-output" class="calc-result-text" data-i18n="index.s2_calc_output">预估收益</span>
+            </div>
+            <div class="calc-btn" onclick="calculateRevenue()">
+                <span class="calc-btn-text" data-i18n="index.s2_calc_btn">计算收益</span>
+            </div>
+            <div class="calc-desc" data-i18n="index.s2_calc_desc">您可以通过输入DAU值，了解到我们给到的预估广告收入</div>
+        </div>
+    </section>
+
+    <!-- 板块3 -->
+    <section class="section section-3" style="background-image: url('切图/广告平台标准/背景/3.jpg');">
+        <div class="section-3-content">
+            <div class="section-3-title">
+                <div class="s3-title-line1" data-i18n="index.s3_title_line1">流量庞大</div>
+                <div class="s3-title-line2">
+                    <span class="text-black" data-i18n="index.s3_title_line2">高价值用户触手可得</span>
+                </div>
+            </div>
+            <div class="section-3-desc" data-i18n="index.s3_desc">
+                覆盖微软应用商店全球高价值流量 与Microsoft深度合作伙伴 将祝您精准触达目标用户、实现高效获取高价值目标用户
+            </div>
+            <a href="guanggao-zhu.html" class="section-3-btn">
+                <span class="s3-btn-text" data-i18n="index.s3_btn">了解更多</span>
+                <img src="切图/流量主流量变现子页面/1-按钮箭头.png" class="s3-btn-icon" alt="arrow">
+            </a>
+            <img src="切图/广告平台标准/图3.png" id="section-3-img" class="section-3-image" alt="展示图">
+        </div>
+    </section>
+
+    <!-- 板块4 -->
+    <section class="section section-4" style="background-image: url('切图/广告平台标准/背景/4.jpg');">
+        <div class="section-4-content">
+            <div class="section-4-title">
+                <div class="s4-title-line1" data-i18n="index.s4_title_line1">高效收益</div>
+                <div class="s4-title-line2">
+                    <span class="text-black" data-i18n="index.s4_title_line2">让游戏应用变现提升数倍</span>
+                </div>
+            </div>
+            <div class="section-4-desc" data-i18n="index.s4_desc">
+                全球优质广告资源加持 与多家顶级广告供应商密切合作 确保用户使用体验的同时 助你轻松提升收益
+            </div>
+            <a href="liuliang-zhu.html" class="section-4-btn">
+                <span class="s4-btn-text" data-i18n="index.s4_btn">了解更多</span>
+                <img src="切图/流量主流量变现子页面/1-按钮箭头.png" class="s4-btn-icon" alt="arrow">
+            </a>
+            <img src="切图/广告平台标准/图4.png" id="section-4-img" class="section-4-image" alt="展示图">
+        </div>
+    </section>
+
+    <!-- 板块5 -->
+    <section class="section section-5" style="background-image: url('切图/广告平台标准/背景/5.jpg');">
+        <div class="section-5-content">
+            <div class="section-5-title" data-i18n="index.s5_title">多元化广告形式，给您不一样的体验</div>
+            
+            <!-- 轮播图容器 -->
+            <div class="carousel-container">
+                <div class="carousel-stage">
+                    <!-- 动态生成图片 -->
+                </div>
+            </div>
+
+            <!-- 描述框 -->
+            <div class="carousel-desc-box">
+                <div class="carousel-desc-text" data-i18n="index.s5_carousel_6">开屏广告</div>
+            </div>
+
+            <!-- 分页点 -->
+            <div class="carousel-dots">
+                <!-- 动态生成点 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 板块6 -->
+    <section class="section section-6" style="background-image: url('切图/广告平台标准/背景/6.jpg');">
+        <div class="section-6-content">
+            <div class="section-6-title" data-i18n="index.s6_title">深受微软应用商店全球开发者信赖</div>
+            
+            <div class="section-6-box"></div>
+            
+            <div class="section-6-text-container">
+                <div class="case-text-item active" data-i18n="index.s6_case1_text">
+                    “Cooking City”由Miracle Games于2021年9月10日发布在微软应用商店，并多次获得微软官方的全球 推荐，深受微软商店用户喜爱。在接入MG Ads SDK 后，日活跃用户增长了20%，人均收入提升了15%。
+                </div>
+                <div class="case-text-item" data-i18n="index.s6_case2_text">
+                    "Snack Short"由Miracle Games于2024年10月23日发布在微软应用商店。在MG Ads提供的数据分析服务支持下，成功识别出最受欢迎的功能模块，并据此进行了有针对性的优化，最终实现了下载量的翻倍增长。同时，通过MG Ads接入Google AdSense等广告，实现了便捷高效的流量变现
+                </div>
+            </div>
+
+            <div class="section-6-img-container">
+                <div class="case-img-item active">
+                    <img src="切图/广告平台标准/案例-1.png" alt="Cooking City">
+                </div>
+                <div class="case-img-item">
+                    <img src="切图/广告平台标准/案例-2.png" alt="Snack Short">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 板块7 -->
+    <section class="section section-7" style="background-image: url('切图/广告平台标准/背景/7.jpg');">
+        <div class="section-7-content">
+            <div class="section-7-title" data-i18n="index.s7_title">加入我们，助力你的成长</div>
+            
+            <a href="guanggao-zhu.html" class="join-btn-1">
+                <span class="join-btn-1-text" data-i18n="index.s7_btn1">高价值流量入口</span>
+            </a>
+            
+            <a href="liuliang-zhu.html" class="join-btn-2">
+                <span class="join-btn-2-text" data-i18n="index.s7_btn2">高效变现入口</span>
+            </a>
+            
+            <div class="section-7-text" data-i18n="index.s7_text">订阅即可获得更多相关行业信息及动态走向</div>
+            
+            <div class="email-input-box">
+                <input type="text" class="email-input" placeholder="请输入您的邮箱" data-i18n="index.s7_email_placeholder">
+            </div>
+            
+            <img src="切图/广告平台标准/邮件.png" class="email-icon" alt="Email">
+        </div>
+    </section>
+
+    <!-- 引入Footer组件 -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/back-to-top.js"></script>
+    <script src="js/scroll-animations.js"></script>
+</body>
+</html>
+

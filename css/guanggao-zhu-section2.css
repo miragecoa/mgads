@@ -1,0 +1,501 @@
+/* 动画定义 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* 板块2样式 */
+.section-2-title {
+    position: absolute;
+    left: 175px;
+    top: 114px; /* 1094 - 980 = 114 */
+    width: 1200px; /* Increased width to prevent wrapping */
+    height: 192px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    color: #000000;
+    line-height: 1.1;
+}
+
+.s2-title-line1 {
+    font-size: 75px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.s2-title-line1.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.s2-title-line2 {
+    font-size: 100px;
+    margin-top: 10px;
+    white-space: nowrap; /* Ensure this line doesn't wrap */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+.s2-title-line2.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 描述部分 - 移除背景框 */
+.section-2-desc {
+    position: absolute;
+    left: 175px;
+    top: 420px; /* 1400 - 980 = 420 */
+    width: 900px; /* 增加宽度防止换行 */
+    height: 84px;
+    background: none;
+
+    /* Text styles */
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.5;
+    padding-left: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+}
+
+.section-2-desc.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 第5个框 - 位于右上方，用于统计数据 */
+.section-2-small-box {
+    position: absolute;
+    left: 1140px;
+    top: 380px; /* 1360 - 980 = 380 */
+    width: 560px;
+    height: 160px;
+    background: url('../切图/广告主子页面/2-小框.png') no-repeat center center;
+    background-size: 100% 100%;
+    z-index: 5; /* 设置基础层级 */
+}
+
+.section-2-small-box.animate-in {
+    animation: floatUpDown 3s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.s2-small-box-title {
+    position: absolute;
+    left: 30px;
+    top: 36px;
+    width: 400px; /* 增加宽度防止换行 */
+    height: 24px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1;
+    white-space: nowrap; /* 强制不换行 */
+}
+
+.s2-small-box-line {
+    position: absolute;
+    left: 23px;
+    top: 77px;
+    width: 150px;
+    height: 3px;
+    background: #0078D7;
+}
+
+.s2-small-box-value {
+    position: absolute;
+    left: 32px;
+    top: 91px;
+    height: 34px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 38px;
+    color: #000000;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.s2-small-box-bg {
+    position: absolute;
+    left: 361px; /* 1501 - 1140 = 361 (相对于小框的位置) */
+    top: 7px; /* 2 + 5 = 7 (再下移5px) */
+    width: 186px;
+    height: 138px;
+    background: url('../切图/广告主子页面/小框背景.png') no-repeat center center;
+    background-size: 100% 100%;
+    z-index: 10; /* 提高层级，确保在小框上方显示 */
+}
+
+/* 4个卡片容器 */
+.section-2-cards {
+    position: absolute;
+    left: 0;
+    top: 560px; /* 1540 - 980 = 560 */
+    width: 100%;
+    height: 450px;
+}
+
+.section-2-card {
+    position: absolute;
+    top: 0;
+    width: 319px;
+    height: 450px;
+    background: #FFFFFF;
+    box-shadow: -2px 2px 12px 0px rgba(174,174,186,0.36);
+    border-radius: 10px;
+    overflow: visible; /* Allow content to be visible */
+}
+
+.section-2-card.animate-in.card-1 {
+    animation: floatUpDown 3s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+
+.section-2-card.animate-in.card-2 {
+    animation: floatUpDown 3s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+
+.section-2-card.animate-in.card-3 {
+    animation: floatUpDown 3s ease-in-out infinite;
+    animation-delay: 0.9s;
+}
+
+.section-2-card.animate-in.card-4 {
+    animation: floatUpDown 3s ease-in-out infinite;
+    animation-delay: 1.2s;
+}
+
+/* 卡片内的图片 - 定位在右下角 */
+.section-2-card img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1; /* Behind text content */
+}
+
+/* 卡片内容样式 - 通用 */
+.card-title {
+    position: absolute;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1;
+    z-index: 2; /* Above image */
+    white-space: nowrap; /* 强制不换行 */
+}
+
+.card-line {
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    background: #0078D7;
+    z-index: 2;
+}
+
+.card-value {
+    position: absolute;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 38px;
+    color: #000000;
+    line-height: 1;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+/* Card 1 specific - 卡片位置: 292px, 1540px (绝对) */
+.card-1 { 
+    left: 292px; 
+}
+
+.card-1 .card-title {
+    left: 30px; /* 322 - 292 = 30 */
+    top: 51px; /* 1591 - 1540 = 51 */
+    width: 250px; /* 增加宽度防止换行 */
+    height: 24px;
+}
+
+.card-1 .card-line {
+    left: 23px; /* 315 - 292 = 23 */
+    top: 92px; /* 1632 - 1540 = 92 */
+}
+
+.card-1 .card-value {
+    left: 31px; /* 323 - 292 = 31 */
+    top: 106px; /* 1646 - 1540 = 106 */
+    width: 56px;
+    height: 34px;
+}
+
+/* Card 2 specific - 卡片位置: 631px, 1540px (绝对) */
+.card-2 { 
+    left: 631px; 
+}
+
+.card-2 .card-title {
+    left: 30px; /* 661 - 631 = 30 */
+    top: 52px; /* 1592 - 1540 = 52 */
+    width: 280px; /* 增加宽度防止换行 */
+    height: 23px;
+}
+
+.card-2 .card-line {
+    left: 23px; /* Assume same offset as card 1 */
+    top: 92px; /* Assume same as card 1, or calculate: need to check if user provided */
+}
+
+.card-2 .card-value {
+    left: 31px; /* 662 - 631 = 31 */
+    top: 111px; /* 1651 - 1540 = 111 */
+    width: 72px;
+    height: 25px;
+}
+
+/* Card 3 specific - 卡片位置: 970px, 1540px (绝对) */
+.card-3 { 
+    left: 970px; 
+}
+
+.card-3 .card-title {
+    left: 30px; /* 1000 - 970 = 30 */
+    top: 51px; /* 1591 - 1540 = 51 */
+    width: 200px; /* 增加宽度防止换行 */
+    height: 24px;
+}
+
+.card-3 .card-line {
+    left: 23px;
+    top: 92px; /* Assume same */
+}
+
+.card-3 .card-value {
+    left: 30px; /* 1000 - 970 = 30 */
+    top: 106px; /* 1646 - 1540 = 106 */
+    width: 65px;
+    height: 34px;
+}
+
+/* Card 4 specific - 卡片位置: 1309px, 1540px (绝对) */
+.card-4 { 
+    left: 1309px; 
+}
+
+.card-4 .card-title {
+    left: 30px; /* 1339 - 1309 = 30 */
+    top: 51px; /* 1591 - 1540 = 51 */
+    width: 200px; /* 增加宽度防止换行 */
+    height: 24px;
+}
+
+.card-4 .card-line {
+    left: 23px;
+    top: 92px; /* Assume same */
+}
+
+.card-4 .card-value {
+    left: 30px; /* 1339 - 1309 = 30 */
+    top: 111px; /* 1651 - 1540 = 111 */
+    width: 63px;
+    height: 25px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1920px) {
+    .section-2-title {
+        left: 9.11vw;
+        top: 5.94vw;
+        width: 62.50vw;
+        height: 10.00vw;
+    }
+
+    .s2-title-line1 { font-size: 3.91vw; }
+    .s2-title-line2 { font-size: 5.21vw; margin-top: 0.52vw; }
+
+    .section-2-desc {
+        left: 9.11vw;
+        top: 21.88vw;
+        width: 38.70vw;
+        height: 4.38vw;
+        font-size: 1.30vw;
+        padding-left: 0;
+    }
+
+    .section-2-small-box {
+        left: 59.38vw;
+        top: 19.79vw;
+        width: 29.17vw;
+        height: 8.33vw;
+    }
+
+    .s2-small-box-title {
+        left: 1.56vw;
+        top: 1.88vw;
+        font-size: 1.30vw;
+    }
+
+    .s2-small-box-line {
+        left: 1.20vw;
+        top: 4.01vw;
+        width: 7.81vw;
+        height: 0.16vw;
+    }
+
+    .s2-small-box-value {
+        left: 1.67vw;
+        top: 4.74vw;
+        height: 1.77vw;
+        font-size: 1.98vw;
+    }
+
+    .s2-small-box-bg {
+        left: 18.80vw; /* 361/1920 */
+        top: 0.36vw; /* 7/1920 */
+        width: 9.69vw; /* 186/1920 */
+        height: 7.19vw; /* 138/1920 */
+    }
+
+    .section-2-cards {
+        top: 29.17vw;
+        height: 23.44vw;
+    }
+
+    .section-2-card {
+        width: 16.61vw;
+        height: 23.44vw;
+        box-shadow: -0.10vw 0.10vw 0.63vw 0px rgba(174,174,186,0.36);
+        border-radius: 0.52vw;
+    }
+
+    .card-1 .card-title {
+        left: 1.56vw;
+        top: 2.66vw; /* 51/1920 */
+        font-size: 1.30vw;
+        height: 1.25vw;
+    }
+
+    .card-1 .card-line {
+        left: 1.20vw;
+        top: 4.79vw; /* 92/1920 */
+        width: 7.81vw;
+        height: 0.16vw;
+    }
+
+    .card-1 .card-value {
+        left: 1.61vw;
+        top: 5.52vw; /* 106/1920 */
+        font-size: 1.98vw;
+        height: 1.77vw;
+    }
+
+    .card-2 .card-title {
+        left: 1.56vw;
+        top: 2.71vw; /* 52/1920 */
+        font-size: 1.30vw;
+        height: 1.20vw;
+    }
+
+    .card-2 .card-line {
+        left: 1.20vw;
+        top: 4.79vw;
+        width: 7.81vw;
+        height: 0.16vw;
+    }
+
+    .card-2 .card-value {
+        left: 1.61vw;
+        top: 5.78vw; /* 111/1920 */
+        font-size: 1.98vw;
+        height: 1.30vw;
+    }
+
+    .card-3 .card-title {
+        left: 1.56vw;
+        top: 2.66vw;
+        font-size: 1.30vw;
+        height: 1.25vw;
+    }
+
+    .card-3 .card-line {
+        left: 1.20vw;
+        top: 4.79vw;
+        width: 7.81vw;
+        height: 0.16vw;
+    }
+
+    .card-3 .card-value {
+        left: 1.56vw;
+        top: 5.52vw;
+        font-size: 1.98vw;
+        height: 1.77vw;
+    }
+
+    .card-4 .card-title {
+        left: 1.56vw;
+        top: 2.66vw;
+        font-size: 1.30vw;
+        height: 1.25vw;
+    }
+
+    .card-4 .card-line {
+        left: 1.20vw;
+        top: 4.79vw;
+        width: 7.81vw;
+        height: 0.16vw;
+    }
+
+    .card-4 .card-value {
+        left: 1.56vw;
+        top: 5.78vw;
+        font-size: 1.98vw;
+        height: 1.30vw;
+    }
+
+    .card-1 { left: 15.21vw; }
+    .card-2 { left: 32.86vw; }
+    .card-3 { left: 50.52vw; }
+    .card-4 { left: 68.18vw; }
+}
+
+@media screen and (min-width: 1920px) {
+    .s2-title-line1 { font-size: 75px; }
+    .s2-title-line2 { font-size: 100px; }
+    .section-2-desc { font-size: 25px; }
+    .s2-small-box-title { font-size: 25px; }
+    .s2-small-box-value { font-size: 38px; }
+
+    .s2-small-box-bg {
+        left: 361px;
+        top: 7px; /* 2 + 5 = 7 (再下移5px) */
+        width: 186px;
+        height: 138px;
+    }
+    .card-title { font-size: 25px; }
+    .card-value { font-size: 38px; }
+}

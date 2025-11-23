@@ -1,0 +1,125 @@
+/* Section 3 Styles */
+.section-3-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Title */
+.section-3-title {
+    position: absolute;
+    left: 451px;
+    top: 50px; /* Moved up */
+    width: 1018px;
+    height: 70px; /* Increased height */
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #000000;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Vertically center text */
+    margin-bottom: 40px; /* Space below title */
+}
+
+/* Social Icons */
+.section-3-social {
+    position: absolute;
+    left: 451px;
+    top: 170px; /* Adjusted to leave space after title (50 + 70 + 40 = 160, add 10px) */
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Match contact info gap for alignment */
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    align-self: flex-start; /* Align to start */
+    margin-top: -6px; /* Adjust to vertically center with text (text is 38px, icon is 50px, difference is 12px, half is 6px) */
+}
+
+.social-icon:first-child {
+    margin-top: 0; /* First icon doesn't need top margin */
+}
+
+/* Contact Information */
+.section-3-contact {
+    position: absolute;
+    left: 526px;
+    top: 170px; /* Adjusted to leave space after title */
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Spacing between contact items (2090-2029=61, 2146-2090=56, average ~30) */
+}
+
+.contact-item {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 38px;
+    color: #000000;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Responsive */
+@media screen and (max-width: 1920px) {
+    .section-3-title {
+        left: 23.49vw; /* 451/1920 */
+        top: 2.6vw; /* 50/1920 */
+        width: 53.02vw; /* 1018/1920 */
+        height: 3.65vw; /* 70/1920 */
+        font-size: 2.6vw; /* 50/1920 */
+        max-font-size: 50px;
+    }
+    
+    .section-3-social {
+        left: 23.49vw; /* 451/1920 */
+        top: 8.85vw; /* 170/1920 */
+        gap: 1.3vw; /* 25/1920 - match contact info gap */
+    }
+    
+    .social-icon {
+        width: 2.6vw; /* 50/1920 */
+        max-width: 50px;
+        height: 2.6vw; /* 50/1920 */
+        max-height: 50px;
+        margin-top: -0.31vw; /* -6/1920 */
+    }
+    
+    .section-3-contact {
+        left: 27.4vw; /* 526/1920 */
+        top: 8.85vw; /* 170/1920 */
+        gap: 1.56vw; /* 30/1920 */
+    }
+    
+    .contact-item {
+        font-size: 1.98vw; /* 38/1920 */
+        max-font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-3-title {
+        left: 20px;
+        top: 40px;
+        width: calc(100% - 40px);
+        font-size: 32px;
+    }
+    
+    .section-3-contact {
+        left: 20px;
+        top: 120px;
+        gap: 20px;
+    }
+    
+    .contact-item {
+        font-size: 24px;
+    }
+}
+

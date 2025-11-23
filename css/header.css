@@ -1,0 +1,246 @@
+/* 自定义字体 */
+@font-face {
+    font-family: 'JiYingHuiPianYuan';
+    src: url('../切图/极影毁片圆.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 固定顶部导航栏 */
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px !important;
+    max-height: 100px !important;
+    min-height: 100px !important;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 1000;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .header-fixed {
+        height: 5.2vw !important;
+        min-height: 60px !important;
+        max-height: 100px !important;
+    }
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 40px;
+    top: 24%;
+}
+
+.logo-link {
+    display: block;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 204px;
+    max-width: 204px;
+    height: auto;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .logo img {
+        width: 10.6vw; /* 204/1920 */
+    }
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+.nav-menu {
+    position: absolute;
+    left: 339px;
+    top: 39%;
+    display: flex;
+    gap: 80px;
+}
+
+/* 小屏幕时使用百分比 */
+@media screen and (max-width: 1600px) {
+    .logo {
+        left: 2.1%; /* 40/1920 */
+    }
+
+    .nav-menu {
+        left: 17.7%; /* 339/1920 */
+        gap: 4.2vw; /* 80/1920 */
+    }
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1E2543;
+    font-family: 'JiYingHuiPianYuan', SourceHanSansCN, sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    max-font-size: 21px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+/* 当前页面导航项高亮 - 使用伪元素添加背景，不影响文字对齐 */
+.nav-link.active {
+    position: relative;
+}
+
+.nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 188px;
+    height: 100px;
+    background: #F5F7FB;
+    z-index: -1;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .nav-link {
+        font-size: 1.1vw; /* 21/1920 */
+    }
+
+    .nav-link.active::before {
+        width: 9.79vw; /* 188/1920 */
+        height: 5.2vw; /* 100/1920 */
+    }
+}
+
+/* 语言切换 */
+.language-selector {
+    position: absolute;
+    right: 160px;
+    top: 0;
+    width: 188px;
+    max-width: 188px;
+    height: 100%;
+    background: #F5F7FB;
+    cursor: pointer;
+}
+
+.language-current {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.language-text {
+    font-family: 'JiYingHuiPianYuan', SourceHanSansCN, sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    max-font-size: 21px;
+    color: #1E2543;
+}
+
+.language-arrow {
+    font-size: 12px;
+    max-font-size: 12px;
+    color: #1E2543;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .language-text {
+        font-size: 1.1vw;
+    }
+
+    .language-arrow {
+        font-size: 0.625vw;
+    }
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #F5F7FB;
+    display: none;
+    flex-direction: column;
+}
+
+.language-selector:hover .language-dropdown {
+    display: flex;
+}
+
+.language-option {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #1E2543;
+    font-family: 'JiYingHuiPianYuan', SourceHanSansCN, sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    max-font-size: 21px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.language-option:hover {
+    background: rgba(0, 120, 215, 0.1);
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .language-option {
+        font-size: 1.1vw;
+    }
+}
+
+/* 登录按钮 */
+.login-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 160px;
+    max-width: 160px;
+    height: 100%;
+    background: #0078D7;
+}
+
+.login-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'JiYingHuiPianYuan', SourceHanSansCN, sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    max-font-size: 21px;
+    text-align: center;
+}
+
+/* 小屏幕时使用vw */
+@media screen and (max-width: 1600px) {
+    .login-link {
+        font-size: 1.1vw;
+    }
+}
+

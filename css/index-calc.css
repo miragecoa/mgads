@@ -1,0 +1,160 @@
+/* 收益计算器样式 */
+.calc-input-1 {
+    position: absolute;
+    left: 408px;
+    top: 793px;
+    width: 316px;
+    height: 64px;
+    background: #FFFFFF;
+    box-shadow: -2px 2px 5px 0px #EAEAF2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    z-index: 2;
+}
+
+.calc-input-field {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #7B7B7B;
+    background: transparent;
+}
+
+.calc-input-field::placeholder {
+    color: #C1CDDC;
+}
+
+.calc-input-2 {
+    position: absolute;
+    left: 818px;
+    top: 793px;
+    width: 316px;
+    height: 64px;
+    background: #FFFFFF;
+    box-shadow: -2px 2px 5px 0px #EAEAF2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 19px;
+    z-index: 2;
+}
+
+.calc-result-text {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #7B7B7B;
+    line-height: 1;
+}
+
+.calc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 1228px;
+    top: 783px;
+    width: 316px;
+    height: 84px;
+    background: #0078D7;
+    border-radius: 10px;
+    text-decoration: none;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.calc-btn-text {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+.calc-desc {
+    position: absolute;
+    left: 649px;
+    top: 900px;
+    width: 622px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #7B7B7B;
+    line-height: 1;
+    text-align: center;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+/* 收益计算器响应式 */
+@media screen and (max-width: 1920px) {
+    .calc-input-1 {
+        left: 21.25vw;
+        top: 41.30vw;
+        width: 16.46vw;
+        height: 3.33vw;
+        padding-left: 1.04vw;
+        border-radius: 0.52vw;
+    }
+
+    .calc-input-field {
+        font-size: 1.30vw;
+    }
+
+    .calc-input-2 {
+        left: 42.60vw;
+        top: 41.30vw;
+        width: 16.46vw;
+        height: 3.33vw;
+        padding-left: 0.99vw;
+        border-radius: 0.52vw;
+    }
+
+    .calc-result-text {
+        font-size: 1.30vw;
+    }
+
+    .calc-btn {
+        left: 63.96vw;
+        top: 40.78vw;
+        width: 16.46vw;
+        height: 4.38vw;
+        border-radius: 0.52vw;
+    }
+
+    .calc-btn-text {
+        font-size: 2.08vw;
+    }
+
+    .calc-desc {
+        left: 33.80vw;
+        top: 46.88vw;
+        width: 32.40vw;
+        font-size: 1.30vw;
+    }
+}
+
+/* 大屏幕限制最大字号 */
+@media screen and (min-width: 1920px) {
+    .calc-input-field {
+        font-size: 25px;
+    }
+
+    .calc-result-text {
+        font-size: 25px;
+    }
+
+    .calc-btn-text {
+        font-size: 40px;
+    }
+
+    .calc-desc {
+        font-size: 25px;
+    }
+}

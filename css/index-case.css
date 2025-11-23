@@ -1,0 +1,164 @@
+/* 动画定义 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 板块6样式 - 案例轮播 */
+.section-6-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 标题 */
+.section-6-title {
+    position: absolute;
+    left: 399px;
+    top: 100px; /* Relative to section start */
+    width: 1109px;
+    height: 69px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 75px;
+    color: #000000;
+    line-height: 69px;
+    white-space: nowrap;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.section-6-title.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 白色背景框 - 使用图片作为背景 */
+.section-6-box {
+    position: absolute;
+    left: 180px;
+    top: 331px; /* Relative to section start */
+    width: 920px;
+    height: 394px;
+    /* Use the image provided by the user */
+    background: url('../切图/广告平台标准/背景/6-框.png') no-repeat center center;
+    background-size: 100% 100%;
+    /* Remove CSS box styling as image replaces it */
+    border-radius: 0;
+    box-shadow: none;
+    z-index: 1;
+}
+
+/* 图片容器 */
+.section-6-img-container {
+    position: absolute;
+    left: 840px;
+    top: 280px; /* Relative to section start */
+    width: 896px;
+    height: 504px;
+    z-index: 3; /* Above box? Based on layer order usually images pop out */
+}
+
+/* 文本容器 */
+.section-6-text-container {
+    position: absolute;
+    left: 216px;
+    top: 362px; /* Relative to section start */
+    width: 578px;
+    /* Height increased to accommodate longer text */
+    height: 300px;
+    z-index: 2; /* Inside box */
+}
+
+/* 轮播项通用样式 */
+.case-img-item, .case-text-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none; /* Prevent interaction with hidden items */
+}
+
+.case-img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.case-text-item {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.5;
+    display: flex;
+    /* Changed from center to flex-start to align text to top */
+    align-items: flex-start;
+}
+
+.case-img-item.active, .case-text-item.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 响应式 */
+@media screen and (max-width: 1920px) {
+    .section-6-title {
+        left: 20.78vw;
+        top: 5.21vw;
+        width: 57.76vw;
+        height: 3.59vw;
+        font-size: 3.91vw;
+        line-height: 3.59vw;
+    }
+
+    .section-6-box {
+        left: 9.38vw;
+        top: 17.24vw;
+        width: 47.92vw;
+        height: 20.52vw;
+        border-radius: 0; /* No radius for image */
+    }
+
+    .section-6-img-container {
+        left: 43.75vw;
+        top: 14.58vw;
+        width: 46.67vw;
+        height: 26.25vw;
+    }
+
+    .section-6-text-container {
+        left: 11.25vw;
+        top: 18.85vw;
+        width: 30.10vw;
+        /* Adjusted height for responsiveness */
+        height: 15.63vw;
+    }
+
+    .case-text-item {
+        font-size: 1.30vw;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .section-6-title {
+        font-size: 75px;
+    }
+    .case-text-item {
+        font-size: 25px;
+    }
+}

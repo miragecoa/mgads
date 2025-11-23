@@ -1,0 +1,126 @@
+/* 动画定义 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section 1 Styles */
+.section-1-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Title - 常见问题 */
+.section-1-title {
+    position: absolute;
+    left: 176px;
+    top: 152px;
+    width: 500px;
+    height: 120px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    color: #000000;
+    line-height: 0.9;
+    letter-spacing: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.section-1-title.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button - 更多内容 */
+.section-1-btn {
+    position: absolute;
+    left: 176px;
+    top: 323px;
+    width: 316px;
+    height: 84px;
+    background: #0078D7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.section-1-btn.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-1-btn:hover {
+    background: #0066b3;
+}
+
+.section-1-btn-text {
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 1920px) {
+    .section-1-title {
+        left: 9.17vw; /* 176/1920 */
+        top: 7.92vw; /* 152/1920 */
+        width: 26.04vw; /* 500/1920 */
+        height: 6.25vw; /* 120/1920 */
+        font-size: 5.21vw; /* 100/1920 */
+        max-font-size: 100px;
+    }
+    
+    .section-1-btn {
+        left: 9.17vw; /* 176/1920 */
+        top: 16.82vw; /* 323/1920 */
+        width: 16.46vw; /* 316/1920 */
+        height: 4.38vw; /* 84/1920 */
+    }
+    
+    .section-1-btn-text {
+        font-size: 2.08vw; /* 40/1920 */
+        max-font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-1-title {
+        left: 20px;
+        top: 80px;
+        width: 380px;
+        height: 90px;
+        font-size: 60px;
+    }
+    
+    .section-1-btn {
+        left: 20px;
+        top: 200px;
+        width: 250px;
+        height: 60px;
+    }
+    
+    .section-1-btn-text {
+        font-size: 28px;
+    }
+}
+

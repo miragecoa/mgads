@@ -1,0 +1,324 @@
+/* 流量变现页面英文版特定样式调整 */
+
+/* Section 1 标题调整 - 与主页 Section 4 相同的处理方式 */
+html[lang="en"] .section-1-title {
+    width: 900px !important; /* 调整宽度以控制换行 */
+    height: 250px !important; /* 确保g的下半部分不被裁剪 */
+}
+
+html[lang="en"] .title-line-1 {
+    white-space: nowrap !important; /* 不换行 */
+    line-height: 1.2 !important;
+}
+
+html[lang="en"] .title-line-2 {
+    white-space: normal !important;
+    line-height: 1.3 !important; /* 增加行高给g的下半部分留空间 */
+    width: 750px !important; /* 调整宽度让"and significantly increase your game's revenue"只换2行 */
+    font-size: 75px !important; /* 原100px，缩小到75px */
+    max-height: 250px !important; /* 增加高度确保2行文字完整显示 */
+    overflow: visible !important; /* 改为visible，确保所有文字显示 */
+    display: block !important; /* 确保line-height和overflow生效 */
+}
+
+/* Section 1 描述文字下移并多换行 */
+html[lang="en"] .section-1-desc {
+    margin-top: 7vw !important; /* 增加上边距，下移内容 */
+    width: 600px !important; /* 限制宽度，让文字多换几行 */
+    max-width: 600px !important;
+    white-space: normal !important;
+}
+
+html[lang="en"] .section-1-desc p {
+    white-space: normal !important;
+    line-height: 1.6 !important;
+    width: 100% !important;
+    display: block !important;
+    margin-bottom: 0.5em !important;
+}
+
+/* Section 1 按钮下移并缩小文字 */
+html[lang="en"] .section-1-btn {
+    top: 720px !important; /* 上移80px，缩小与描述文字的间距 */
+}
+
+html[lang="en"] .section-1-btn .btn-text {
+    font-size: 32px !important; /* 原40px，缩小到32px */
+}
+
+@media screen and (max-width: 1920px) {
+    html[lang="en"] .section-1-title {
+        width: 46.88vw !important; /* 900/1920 */
+        height: 13.02vw !important; /* 250/1920 */
+    }
+    
+    html[lang="en"] .title-line-1 {
+        white-space: nowrap !important; /* 不换行 */
+        line-height: 1.2 !important;
+    }
+    
+    html[lang="en"] .title-line-2 {
+        white-space: normal !important;
+        line-height: 1.3 !important; /* 增加行高给g的下半部分留空间 */
+        width: 39.06vw !important; /* 750/1920 */
+        font-size: 3.91vw !important; /* 75/1920 */
+        max-height: 13.02vw !important; /* 250/1920 */
+        overflow: visible !important; /* 改为visible，确保所有文字显示 */
+        display: block !important; /* 确保line-height和overflow生效 */
+    }
+    
+    html[lang="en"] .section-1-desc {
+        margin-top: 7vw !important; /* 增加上边距，下移内容 */
+        width: 31.25vw !important; /* 600/1920 */
+        max-width: 31.25vw !important;
+    }
+    
+    html[lang="en"] .section-1-desc p {
+        white-space: normal !important;
+        line-height: 1.6 !important;
+        width: 100% !important;
+    }
+    
+    html[lang="en"] .section-1-btn {
+        top: 37.5vw !important; /* 720/1920 */
+    }
+    
+    html[lang="en"] .section-1-btn .btn-text {
+        font-size: 1.67vw !important; /* 32/1920 */
+    }
+}
+
+/* Section 2 标题主文本换行 */
+html[lang="en"] .section-2-title .title-main {
+    white-space: normal !important;
+    line-height: 1.3 !important;
+    width: 1800px !important; /* 继续增加宽度，让文本只换2行 */
+    max-width: 1800px !important;
+}
+
+/* Section 2 描述文字下移 */
+html[lang="en"] .section-2-desc {
+    top: 510px !important; /* 上移10px */
+    white-space: nowrap !important; /* 不换行 */
+}
+
+html[lang="en"] .section-2-title .title-main span {
+    display: inline !important;
+    white-space: normal !important;
+}
+
+/* Section 2 框内文字缩小 */
+html[lang="en"] .section-2-text-1,
+html[lang="en"] .section-2-text-2 {
+    font-size: 20px !important; /* 缩小字体 */
+    line-height: 1.5 !important;
+}
+
+/* Section 3 标题主文本换行 - 与 Section 2 相同的处理方式 */
+html[lang="en"] .section-3-title .title-main {
+    white-space: normal !important;
+    line-height: 1.3 !important;
+    width: 1800px !important; /* 与 Section 2 相同的宽度，让文本只换2行 */
+    max-width: 1800px !important;
+}
+
+html[lang="en"] .section-3-title .title-main span {
+    display: inline !important;
+    white-space: normal !important;
+}
+
+/* Section 3 描述文字下移 */
+html[lang="en"] .section-3-desc {
+    top: 510px !important; /* 上移10px */
+    white-space: nowrap !important; /* 不换行 */
+}
+
+@media screen and (max-width: 1920px) {
+    html[lang="en"] .section-2-title .title-main {
+        white-space: normal !important;
+        line-height: 1.3 !important;
+        width: 93.75vw !important; /* 1800/1920 */
+        max-width: 93.75vw !important;
+    }
+    
+    html[lang="en"] .section-2-desc {
+        top: 26.56vw !important; /* 510/1920 */
+        white-space: nowrap !important; /* 不换行 */
+    }
+    
+    html[lang="en"] .section-2-title .title-main span {
+        display: inline !important;
+        white-space: normal !important;
+    }
+    
+    html[lang="en"] .section-2-text-1,
+    html[lang="en"] .section-2-text-2 {
+        font-size: 1.04vw !important; /* 20/1920 */
+        line-height: 1.5 !important;
+    }
+    
+    html[lang="en"] .section-3-title .title-main {
+        white-space: normal !important;
+        line-height: 1.3 !important;
+        width: 93.75vw !important; /* 1800/1920 */
+        max-width: 93.75vw !important;
+    }
+    
+    html[lang="en"] .section-3-title .title-main span {
+        display: inline !important;
+        white-space: normal !important;
+    }
+    
+    html[lang="en"] .section-3-desc {
+        top: 26.56vw !important; /* 510/1920 */
+        white-space: nowrap !important; /* 不换行 */
+    }
+}
+
+/* Section 4 框内文字缩小 */
+html[lang="en"] .section-4-frames .frame-title {
+    font-size: 20px !important; /* 缩小标题字体 */
+}
+
+html[lang="en"] .section-4-frames .frame-desc {
+    font-size: 18px !important; /* 缩小描述字体 */
+    line-height: 1.5 !important;
+}
+
+/* Section 5 标题文字缩小 */
+html[lang="en"] .s5-item-title {
+    font-size: 20px !important; /* 原25px，缩小到20px */
+}
+
+/* Section 5 标题位置调整 */
+html[lang="en"] .s5-left-1 {
+    top: 456px !important; /* 上移1px */
+}
+
+html[lang="en"] .s5-left-2 {
+    top: 669px !important; /* 上移2px */
+}
+
+html[lang="en"] .s5-right-1 {
+    top: 499px !important; /* 再上移8px */
+}
+
+/* Section 5 左侧标题换行 - 只换2行 */
+html[lang="en"] .s5-left-1 .s5-item-title {
+    white-space: normal !important;
+    line-height: 1.3 !important;
+    width: 650px !important; /* 继续增加宽度，让文本只换2行 */
+    max-width: 650px !important;
+}
+
+/* Section 5 左侧描述文字宽度增加 */
+html[lang="en"] .s5-left-1 {
+    width: 450px !important; /* 原379px，增加宽度 */
+}
+
+html[lang="en"] .s5-left-1 .s5-item-body {
+    width: 100% !important;
+}
+
+/* Section 5 标题上移，缩小与顶部空间 */
+html[lang="en"] .section-5-title {
+    top: 52px !important; /* 原156px，缩小为1/3，上移标题 */
+}
+
+/* Section 5 标题主文本换行 - 与 Section 2/3 相同的处理方式 */
+html[lang="en"] .section-5-title .title-main {
+    white-space: normal !important;
+    line-height: 1.3 !important;
+    width: 1800px !important; /* 与 Section 2/3 相同的宽度，让文本只换2行 */
+    max-width: 1800px !important;
+}
+
+html[lang="en"] .section-5-title .title-main span {
+    display: inline !important;
+    white-space: normal !important;
+}
+
+@media screen and (max-width: 1920px) {
+    html[lang="en"] .section-4-frames .frame-title {
+        font-size: 1.04vw !important; /* 20/1920 */
+    }
+    
+    html[lang="en"] .section-4-frames .frame-desc {
+        font-size: 0.94vw !important; /* 18/1920 */
+        line-height: 1.5 !important;
+    }
+    
+    html[lang="en"] .section-5-title .title-main {
+        white-space: normal !important;
+        line-height: 1.3 !important;
+        width: 93.75vw !important; /* 1800/1920 */
+        max-width: 93.75vw !important;
+    }
+    
+    html[lang="en"] .section-5-title .title-main span {
+        display: inline !important;
+        white-space: normal !important;
+    }
+    
+    html[lang="en"] .section-5-title {
+        top: 2.71vw !important; /* 52/1920，缩小为原来的1/3 */
+    }
+    
+    html[lang="en"] .s5-item-title {
+        font-size: 1.04vw !important; /* 20/1920 */
+    }
+    
+    html[lang="en"] .s5-left-1 {
+        top: 23.75vw !important; /* 456/1920 */
+        width: 23.44vw !important; /* 450/1920 */
+    }
+    
+    html[lang="en"] .s5-left-2 {
+        top: 34.84vw !important; /* 669/1920 */
+    }
+    
+    html[lang="en"] .s5-left-1 .s5-item-body {
+        width: 100% !important;
+    }
+    
+    html[lang="en"] .s5-right-1 {
+        top: 26.00vw !important; /* 499/1920 */
+    }
+    
+    html[lang="en"] .s5-left-1 .s5-item-title {
+        white-space: normal !important;
+        line-height: 1.3 !important;
+        width: 33.85vw !important; /* 650/1920 */
+        max-width: 33.85vw !important;
+    }
+}
+
+/* Section 6 高度减少1/3 */
+html[lang="en"] .section:nth-of-type(6) {
+    height: 37.5vw !important; /* 原56.25vw，减少1/3 */
+    max-height: 720px !important; /* 原1080px，减少1/3 */
+}
+
+/* Section 6 标题居中 */
+html[lang="en"] .section-6-title {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    width: auto !important;
+    max-width: 90% !important;
+}
+
+@media screen and (min-width: 1920px) {
+    html[lang="en"] .section:nth-of-type(6) {
+        height: 720px !important; /* 原1080px，减少1/3 */
+    }
+    
+    html[lang="en"] .section-6-title {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        text-align: center !important;
+        width: auto !important;
+        max-width: 90% !important;
+    }
+}
+

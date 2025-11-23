@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'JiYingHuiPianYuan';
+    src: url('../切图/极影毁片圆.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'JiYingHuiPianYuan', 'Microsoft YaHei', sans-serif;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+.section {
+    width: 100%;
+    position: relative;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Section 1 - 固定高度 540px */
+.section-1 {
+    width: 100%;
+    height: 540px;
+    margin-top: 100px; /* Account for fixed header */
+}
+
+/* Section 2 - 初始高度 1310px，可自适应展开 */
+.section-2 {
+    width: 100%;
+    min-height: 1310px;
+    height: auto;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+/* Section 3 - 固定高度 410px */
+.section-3 {
+    width: 100%;
+    height: 410px;
+}
+
+/* Content Containers */
+.section-1-content,
+.section-2-content,
+.section-3-content {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Responsive */
+@media screen and (max-width: 1920px) {
+    .section-1 {
+        height: 28.125vw; /* 540/1920 */
+        margin-top: 5.2vw; /* Account for fixed header */
+    }
+    
+    .section-2 {
+        min-height: 68.23vw; /* 1310/1920 */
+    }
+    
+    .section-3 {
+        height: 21.35vw; /* 410/1920 */
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .section-1 {
+        margin-top: 100px;
+    }
+}
+

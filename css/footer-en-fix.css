@@ -1,0 +1,16 @@
+/* Footer 英文版特定样式调整 - 适用于所有页面 */
+
+/* Footer 内容调整，避免与左右两侧重叠 */
+html[lang="en"] .footer-content {
+    left: 600px !important; /* 原700px，左移100px，避免与右侧图标重叠 */
+    gap: 80px !important; /* 原120px，减小间距 */
+}
+
+@media screen and (max-width: 1920px) {
+    /* Footer 内容调整，避免与左右两侧重叠 */
+    html[lang="en"] .footer-content {
+        left: 31.25vw !important; /* 600/1920 */
+        gap: 4.17vw !important; /* 80/1920 */
+    }
+}
+

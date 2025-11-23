@@ -1,0 +1,265 @@
+/* 动画定义 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 板块3样式 */
+.section-3-title {
+    position: absolute;
+    left: 175px;
+    top: 115px; /* 2175 - 2060 = 115 */
+    width: 1175px;
+    height: 192px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    color: #000000;
+    line-height: 1.1;
+}
+
+.s3-title-line1 {
+    font-size: 75px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.s3-title-line1.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.s3-title-line2 {
+    font-size: 100px;
+    margin-top: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s;
+}
+
+.s3-title-line2.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-3-desc {
+    position: absolute;
+    left: 175px;
+    top: 420px; /* 2480 - 2060 = 420 */
+    width: 1000px; /* 增加宽度确保文字不换行 */
+    height: 54px;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+}
+
+.section-3-desc.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 3个框容器 */
+.section-3-frames {
+    position: absolute;
+    left: 105px; /* 125 - 20 = 105 */
+    top: 518px; /* 538 - 20 = 518 */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between frames, adjust as needed */
+}
+
+.section-3-frame {
+    position: relative;
+    width: 1680px; /* 1400 * 1.2 = 1680 */
+    height: 144px; /* 120 * 1.2 = 144 */
+    background: url('../切图/广告主子页面/3-框1.png') no-repeat center center;
+    background-size: contain;
+}
+
+.section-3-frame.frame-1 {
+    background-image: url('../切图/广告主子页面/3-框1.png');
+}
+
+.section-3-frame.frame-2 {
+    background-image: url('../切图/广告主子页面/3-框2.png');
+}
+
+.section-3-frame.frame-3 {
+    background-image: url('../切图/广告主子页面/3-框3.png');
+}
+
+/* Frame内容样式 */
+.frame-title {
+    position: absolute;
+    left: 270px; /* 向右移动50px */
+    top: 30px; /* 框内垂直居中：(144-84)/2 = 30 */
+    width: 100px;
+    height: 84px;
+    font-family: Medium, sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 28px;
+}
+
+.frame-desc {
+    position: absolute;
+    left: 412px; /* 向右移动50px */
+    top: 45px; /* 框内垂直居中：(144-54)/2 = 45 */
+    height: 54px;
+    font-family: Medium, sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000000;
+    text-align: left;
+    line-height: 1.2;
+}
+
+/* 每个frame的具体定位 */
+.frame-1 .frame-title {
+    /* 使用通用的居中定位 */
+}
+
+.frame-1 .frame-desc {
+    width: 600px; /* 增加宽度确保文字不换行 */
+}
+
+.frame-2 .frame-title {
+    /* 使用通用的居中定位 */
+}
+
+.frame-2 .frame-desc {
+    width: 900px; /* 增加宽度确保文字不换行 */
+}
+
+.frame-3 .frame-title {
+    /* 使用通用的居中定位 */
+}
+
+.frame-3 .frame-desc {
+    width: 1000px; /* 增加宽度确保文字不换行 */
+}
+
+/* Responsive */
+@media screen and (max-width: 1920px) {
+    .section-3-title {
+        left: 9.11vw;
+        top: 5.99vw; /* 115/1920 */
+        width: 61.20vw;
+        height: 10.00vw;
+    }
+
+    .s3-title-line1 { font-size: 3.91vw; }
+    .s3-title-line2 { font-size: 5.21vw; margin-top: 0.52vw; }
+
+    .section-3-desc {
+        left: 9.11vw;
+        top: 21.88vw;
+        width: 52.08vw; /* 1000/1920 */
+        height: 2.81vw;
+        font-size: 1.30vw;
+    }
+
+    .section-3-frames {
+        left: 5.47vw; /* 105/1920 */
+        top: 26.98vw; /* 518/1920 */
+        gap: 1.04vw;
+    }
+
+    .section-3-frame {
+        width: 87.50vw; /* 1680/1920 */
+        height: 7.50vw; /* 144/1920 */
+    }
+
+    .frame-title {
+        left: 14.06vw; /* 270/1920 */
+        top: 1.56vw; /* 30/1920 */
+        width: 5.21vw; /* 100/1920 */
+        height: 4.38vw; /* 84/1920 */
+        font-size: 1.30vw; /* 25/1920 */
+        line-height: 1.46vw; /* 28/1920 */
+    }
+
+    .frame-desc {
+        left: 21.46vw; /* 412/1920 */
+        top: 2.34vw; /* 45/1920 */
+        height: 2.81vw; /* 54/1920 */
+        font-size: 1.30vw; /* 25/1920 */
+    }
+
+    .frame-1 .frame-desc {
+        width: 31.25vw; /* 600/1920 */
+    }
+
+    .frame-2 .frame-desc {
+        width: 46.88vw; /* 900/1920 */
+    }
+
+    .frame-3 .frame-desc {
+        width: 52.08vw; /* 1000/1920 */
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .s3-title-line1 { font-size: 75px; }
+    .s3-title-line2 { font-size: 100px; }
+    .section-3-desc {
+        font-size: 25px;
+        width: 1000px; /* 增加宽度确保文字不换行 */
+    }
+
+    .section-3-frame {
+        width: 1680px; /* 1400 * 1.2 = 1680 */
+        height: 144px; /* 120 * 1.2 = 144 */
+    }
+
+    .frame-title {
+        left: 270px; /* 向右移动50px */
+        top: 30px; /* 框内垂直居中：(144-84)/2 = 30 */
+        width: 100px;
+        height: 84px;
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+    .frame-desc {
+        left: 412px; /* 向右移动50px */
+        top: 45px; /* 框内垂直居中：(144-54)/2 = 45 */
+        height: 54px;
+        font-size: 25px;
+    }
+
+    .frame-1 .frame-desc {
+        width: 600px; /* 增加宽度确保文字不换行 */
+    }
+
+    .frame-2 .frame-desc {
+        width: 900px; /* 增加宽度确保文字不换行 */
+    }
+
+    .frame-3 .frame-desc {
+        width: 1000px; /* 增加宽度确保文字不换行 */
+    }
+}
+
+
+
+
+
+
+
