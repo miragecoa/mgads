@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         placeholder.innerHTML = footerHTML;
     } else {
         // Fallback for pages that might not have the placeholder
-        document.body.insertAdjacentHTML('beforeend', footerHTML);
+    document.body.insertAdjacentHTML('beforeend', footerHTML);
     }
 
     // Trigger i18n update if available

@@ -1,13 +1,19 @@
 const translations = {
     zh: {
         title: {
-            index: "广告平台标准 - MG广告平台",
-            advertiser: "广告主 - MG广告平台",
-            publisher: "流量主流量变现 - MG广告平台",
-            faq: "常见问题 - MG广告平台"
+            index: "MG Ads - 微软应用商店专属广告聚合平台 | 高收益流量变现",
+            advertiser: "MG Ads - 广告主平台 | 精准触达Win10/Win11全球用户",
+            publisher: "MG Ads - 开发者平台 | 微软应用商店广告变现",
+            faq: "MG Ads - 常见问题解答 | 广告主&开发者必看"
+        },
+        description: {
+            index: "MG Ads是专注于微软应用商店的广告聚合平台，为开发者提供高填充率广告位、智能结算系统和数据分析服务，助力提升收益20%+。支持一键接入UWP SDK，立即注册变现！",
+            advertiser: "MG Ads提供微软应用商店（Win10/Win11）全球广告投放服务，覆盖100+国家高价值用户，广告填充率95%+，支持插屏、激励视频等多种形式，助您精准触达目标受众。立即申请投放！",
+            publisher: "MG Ads是微软应用商店专属广告聚合平台，提供高填充率（95%+）广告变现方案，30分钟完成SDK接入，案例显示开发者收益提升20%。支持Unity、C++等主流引擎，立即注册！",
+            faq: "MG Ads帮助中心：解答广告主投放、开发者SDK接入、广告填充率优化、收益结算等常见问题，提供详细教程与客服支持，快速解决您的疑问！"
         },
         nav: {
-            traffic: "流量变现",
+            traffic: "开发者",
             advertiser: "广告主",
             docs: "开发者文档",
             faq: "FAQ",
@@ -16,7 +22,7 @@ const translations = {
         },
         footer: {
             product: "产品",
-            traffic: "流量变现",
+            traffic: "开发者",
             advertiser: "广告主",
             docs: "文档",
             dev_docs: "开发者文档",
@@ -165,13 +171,19 @@ const translations = {
     },
     en: {
         title: {
-            index: "MG Ads Platform - Global Ad Aggregation",
-            advertiser: "Advertiser - MG Ads Platform",
-            publisher: "Traffic Monetization - MG Ads Platform",
-            faq: "FAQ - MG Ads Platform"
+            index: "MG Ads - Microsoft Store Exclusive Ad Aggregation Platform | Maximize Your Traffic Revenue",
+            advertiser: "MG Ads - Advertiser | Precisely Engage Windows 10/11 Users Worldwide",
+            publisher: "MG Ads - Developer | Microsoft Store Ad Monetization",
+            faq: "MG Ads - FAQ | Essential Information for Advertisers & Developers"
+        },
+        description: {
+            index: "MG Ads is a Microsoft Store - focused ad aggregation platform that provides developers with high-fill-rate placements, smart settlement tools, and powerful analytic - helping you increase revenue by 20% or more. Integrate instantly with our UWP SDK and start monetizing now!",
+            advertiser: "MG Ads provides global advertising services for the Microsoft Store (Windows 10/11), reaching high-value users across 100+ countries. With fill rates above 95% and support for formats such as interstitial and rewarded videos, we help you precisely reach your target audience. Start your campaign today!",
+            publisher: "MG Ads is a Microsoft Store - exclusive ad aggregation platform providing high-fill-rate (95%) monetization solutions. With a 30-minute SDK integration process and proven cases showing a 20% revenue uplift, we support major engines including Unity and C++. Register now!",
+            faq: "MG Ads Help Center: Find answers to common questions about advertiser campaigns, developer SDK integration, fill-rate optimization, revenue settlement, and more. Access detailed guides and customer support to quickly resolve your issues!"
         },
         nav: {
-            traffic: "Traffic Monetization",
+            traffic: "Developer",
             advertiser: "Advertiser",
             docs: "Developer Docs",
             faq: "FAQ",
@@ -180,7 +192,7 @@ const translations = {
         },
         footer: {
             product: "Product",
-            traffic: "Traffic Monetization",
+            traffic: "Developer",
             advertiser: "Advertiser",
             docs: "Docs",
             dev_docs: "Developer Docs",
@@ -213,12 +225,12 @@ const translations = {
             s2_calc_output: "Estimated Revenue",
             s2_calc_btn: "Calculate Revenue",
             s2_calc_desc: "Enter DAU to see your estimated ad revenue",
-            s3_title_line1: "Large-scale traffic",
-            s3_title_line2: "and seamless access to high-value users",
+            s3_title_line1: "Large Scale Traffic",
+            s3_title_line2: "High Value Users",
             s3_desc: "Tap into global high-value traffic in the Microsoft Store As a strategic Microsoft partner, MG Ads helps you reach your target users with precision and maximize acquisition of high-value audiences",
             s3_btn: "More Details",
-            s4_title_line1: "Achieve efficient monetization",
-            s4_title_line2: "and significantly increase your game’s revenue",
+            s4_title_line1: "Efficient Monetization and Revenue Increase",
+            s4_title_line2: "",
             s4_desc: "Powered by premium global ad resources and close collaborations with top-tier ad vendors, we help you boost revenue effortlessly while maintaining an excellent user experience",
             s4_btn: "More Details",
             s5_title: "Diverse Ad Formats for a Unique Experience",
@@ -238,8 +250,8 @@ const translations = {
             s7_email_placeholder: "Enter your email"
         },
         advertiser: {
-            s1_title_line1: "Large-scale traffic",
-            s1_title_line2: "and seamless access to high-value users",
+            s1_title_line1: "Large Scale Traffic",
+            s1_title_line2: "High Value Users",
             s1_desc: "Tap into global high-value traffic in the Microsoft Store As a strategic Microsoft partner, MG Ads helps you reach your target users with precision and maximize acquisition of high-value audiences",
             s1_btn: "More Details",
             s2_title_line1: "Achieve steady and efficient growth",
@@ -251,7 +263,7 @@ const translations = {
             s2_card1_unit: "M",
             s2_box_title: "MAD on the Microsoft Store",
             s2_card1_title: "High Quality Players",
-            s2_card2_title: "Revenue from the U.S. Single Market",
+            s2_card2_title: "Revenue from the U.S.",
             s2_card3_title: "ARPPU",
             s2_card4_title: "Covering Global Regions",
             s3_title_line1: "Core Advertising Value: Deep Player Engagement",
@@ -267,8 +279,8 @@ const translations = {
             s4_btn: "Start Now"
         },
         publisher: {
-            s1_title_line1: "Achieve efficient monetization",
-            s1_title_line2: "and significantly increase your game’s revenue",
+            s1_title_line1: "Efficient Monetization and Revenue Increase",
+            s1_title_line2: "",
             s1_desc: "Powered by premium global ad resources and close collaborations with top-tier ad vendors, we help you boost revenue effortlessly while maintaining an excellent user experience",
             s1_btn: "More Details",
             s2_title_sub: "Who We Are:",
@@ -281,7 +293,7 @@ const translations = {
             s3_title_main_prefix: "Addressing the Core Pain Points of ",
             s3_title_main_suffix: "Microsoft Developers",
             s3_desc: "MG Ads was created to systematically address these challenges",
-            s3_card1_title: "Limited and Inefficient Monetization Channels",
+            s3_card1_title: "Limited Monetization Channels",
             s3_card1_desc: "Many mainstream ad platforms offer weak or no support for UWP/Win32 applications, leaving developers with low ad fill rates and non-competitive eCPMs",
             s3_card2_title: "Complex Technical Integration",
             s3_card2_desc: "There is a lack of unified, standardized SDK solutions for different development engines (Unity, Cocos, UE5, C++, etc.), resulting in high porting and integration costs",
@@ -324,7 +336,7 @@ const translations = {
             a7: "We have detailed graphic instructions on how to create ads in the MG backend Please click <a href=\"https://doc.mguwp.net/DevelopersQ&A.html\" target=\"_blank\" style=\"color: #0078D7; text-decoration: underline;\">MG Backend Operation Guide</a> for details",
             q8: "What if ads are not displaying properly?",
             a8: "First, there is a few seconds delay for the first ad display, please wait for caching Second, check if the ad slot configuration in MG backend is correct, if the ad slot ID is wrong, or if the ad switch is on Finally, if still no ads after checking, contact MG operations for assistance",
-            contact_title: "How to contact Miracle Games for business cooperation?"
+            contact_title: "Business Contact Information"
         }
     }
 };

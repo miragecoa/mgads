@@ -97,7 +97,7 @@ html[lang="en"] .s3-btn-text {
 /* Section 4 标题调整 */
 html[lang="en"] .section-4-title {
     width: 900px !important; /* 调整宽度以控制换行 */
-    height: 250px !important; /* 原191px，增加到250px，确保g的下半部分不被裁剪 */
+    height: 110px !important; /* 改为单行高度 */
 }
 
 html[lang="en"] .s4-title-line1 {
@@ -106,21 +106,16 @@ html[lang="en"] .s4-title-line1 {
 }
 
 html[lang="en"] .s4-title-line2 {
-    white-space: normal !important;
-    line-height: 1.3 !important; /* 增加行高给g的下半部分留空间 */
-    width: 750px !important; /* 调整宽度让"and significantly increase your game's revenue"只换2行 */
-    font-size: 75px !important; /* 原100px，缩小到75px */
-    max-height: 250px !important; /* 增加高度确保2行文字完整显示 */
-    overflow: visible !important; /* 改为visible，确保所有文字显示 */
+    display: none !important; /* line2为空，隐藏 */
 }
 
 /* Section 4 描述文字和按钮下移 */
 html[lang="en"] .section-4-desc {
-    top: 450px !important; /* 原360px，下移90px，确保不重叠 */
+    top: 180px !important; /* 标题高度变小，上移描述文字 */
 }
 
 html[lang="en"] .section-4-btn {
-    top: 740px !important; /* 原516px，下移224px，确保与body文字不重叠 */
+    top: 450px !important; /* 上移按钮，但需略微下移以避开文字 */
 }
 
 /* Section 4 按钮文字缩小 */
@@ -275,7 +270,7 @@ html[lang="en"] .section-7-text {
     
     html[lang="en"] .section-4-title {
         width: 46.88vw !important; /* 900/1920 */
-        height: 13.02vw !important; /* 250/1920 */
+        height: 5.73vw !important; /* 110/1920 */
     }
     
     html[lang="en"] .s4-title-line1 {
@@ -284,20 +279,15 @@ html[lang="en"] .section-7-text {
     }
     
     html[lang="en"] .s4-title-line2 {
-        white-space: normal !important;
-        line-height: 1.3 !important; /* 增加行高给g的下半部分留空间 */
-        width: 39.06vw !important; /* 750/1920 */
-        font-size: 3.91vw !important; /* 75/1920 */
-        max-height: 13.02vw !important; /* 250/1920 */
-        overflow: visible !important; /* 改为visible，确保所有文字显示 */
+        display: none !important; /* line2为空，隐藏 */
     }
     
     html[lang="en"] .section-4-desc {
-        top: 23.44vw !important; /* 450/1920 */
+        top: 9.38vw !important; /* 180/1920 */
     }
     
     html[lang="en"] .section-4-btn {
-        top: 38.54vw !important; /* 740/1920 */
+        top: 23.44vw !important; /* 450/1920 */
     }
     
     html[lang="en"] .s4-btn-text {

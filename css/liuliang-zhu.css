@@ -599,6 +599,8 @@ body {
     width: 570.105px; /* 553.5 * 1.03 = 570.105px */
     height: auto;
     max-width: 100%; /* 防止溢出 */
+    animation: floatUpDown 3s ease-in-out infinite;
+    animation-delay: 0.5s;
 }
 
 .dashed-line {

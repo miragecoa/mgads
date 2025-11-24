@@ -36,7 +36,7 @@ async function calculateRevenue() {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2
             });
-            output.textContent = `¥${revenue}`;
+            output.textContent = `$${revenue}`;
             output.style.color = '#0078D7'; // 使用蓝色高亮结果
         }
     } catch (error) {

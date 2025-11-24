@@ -51,12 +51,25 @@ function updatePageContent() {
     // Set html lang attribute
     document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
     
-    // 0. Update page title
+    // 0. Update page title and meta description
     const currentPage = getCurrentPage();
     const titleKey = `title.${currentPage}`;
     const titleValue = getNestedTranslation(translations[lang], titleKey);
     if (titleValue) {
         document.title = titleValue;
+    }
+    
+    // Update meta description
+    const descKey = `description.${currentPage}`;
+    const descValue = getNestedTranslation(translations[lang], descKey);
+    if (descValue) {
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (!metaDesc) {
+            metaDesc = document.createElement('meta');
+            metaDesc.setAttribute('name', 'description');
+            document.head.appendChild(metaDesc);
+        }
+        metaDesc.setAttribute('content', descValue);
     }
     
     // 1. Update elements with data-i18n attribute
@@ -65,7 +78,8 @@ function updatePageContent() {
         const key = el.getAttribute('data-i18n');
         const value = getNestedTranslation(translations[lang], key);
         
-        if (value) {
+        // Check if value exists (including empty string)
+        if (value !== null && value !== undefined) {
             if (el.tagName === 'INPUT' && el.getAttribute('placeholder')) {
                 el.setAttribute('placeholder', value);
             } else {
@@ -82,6 +96,41 @@ function updatePageContent() {
     
     // 3. Update Language Selector State
     updateLanguageSelector(lang);
+    
+    // 4. Update Links based on language
+    updateLinks(lang);
+}
+
+// Update links based on language
+function updateLinks(lang) {
+    const isEn = lang === 'en';
+    
+    // Define link updates
+    const linksToUpdate = [
+        {
+            selector: 'a[href*="doc.mguwp.net"]',
+            zh: 'https://doc.mguwp.net/',
+            en: 'https://doc.mguwp.net/en/'
+        },
+        {
+            selector: 'a[href*="about_index.html"]',
+            zh: 'https://www.mguwp.net/about_index.html',
+            en: 'https://www.mguwp.net/en/about_index.html'
+        },
+        {
+            selector: 'a.section-4-btn[href="#"]',
+            zh: 'https://doc.mguwp.net/develop.html',
+            en: 'https://doc.mguwp.net/en/develop.html'
+        }
+    ];
+
+    linksToUpdate.forEach(item => {
+        const links = document.querySelectorAll(item.selector);
+        links.forEach(link => {
+            // Update href directly based on language
+            link.href = isEn ? item.en : item.zh;
+        });
+    });
 }
 
 // Helper to get nested object value by string key (e.g. "index.s1_title")

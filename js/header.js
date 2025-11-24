@@ -20,7 +20,7 @@ var headerHTML = '\
             <a href="guanggao-zhu.html" class="nav-link" data-i18n="nav.advertiser">广告主</a>\
             <a href="https://doc.mguwp.net/" class="nav-link" target="_blank" data-i18n="nav.docs">开发者文档</a>\
             <a href="faq.html" class="nav-link" data-i18n="nav.faq">FAQ</a>\
-            <a href="http://www.mguwp.net/about_index.html" class="nav-link" target="_blank" data-i18n="nav.about">关于我们</a>\
+            <a href="https://www.mguwp.net/about_index.html" class="nav-link" target="_blank" data-i18n="nav.about">关于我们</a>\
         </nav>\
         <div class="language-selector">\
             <div class="language-current">\
@@ -59,7 +59,7 @@ function initHeaderEvents() {
     
     // 语言切换功能
     var languageOptions = document.querySelectorAll('.language-option');
-    
+
     languageOptions.forEach(function(option) {
         option.addEventListener('click', function(e) {
             e.preventDefault();
@@ -134,7 +134,7 @@ function highlightCurrentPage() {
              if (href && href.indexOf(bodyPage + '.html') !== -1) {
                 link.classList.add('active');
             }
-        });
+    });
     }
 }
 
