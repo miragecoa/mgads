@@ -64,7 +64,7 @@ body {
     position: absolute;
     left: 175px;
     top: 14.4%; /* 155/1080 */
-    max-width: 50%;
+    max-width: 65%; /* 增大文字框宽度 */
 }
 
 /* 小屏幕时使用百分比 */
@@ -144,7 +144,7 @@ body {
 }
 
 .section-1-desc {
-    margin-top: 1.5vw;
+    margin-top: 4.5vw; /* 下移描述文字，避免遮挡 */
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
@@ -195,7 +195,7 @@ body {
 .section-1-btn {
     position: absolute;
     left: 176px;
-    top: 616px;
+    top: 680px; /* 下移按钮 */
     width: 316px;
     height: 84px;
     background: #0078D7;
@@ -800,7 +800,7 @@ body section.section:last-of-type {
     /* 按钮响应式 */
     .section-1-btn {
         left: 9.17vw; /* 176/1920 */
-        top: 32.08vw; /* 616/1920 */
+        top: 35.42vw; /* 680/1920 */
         width: 16.46vw; /* 316/1920 */
         height: 4.38vw; /* 84/1920 */
     }

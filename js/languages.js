@@ -229,8 +229,8 @@ const translations = {
             s3_title_line2: "High Value Users",
             s3_desc: "Tap into global high-value traffic in the Microsoft Store As a strategic Microsoft partner, MG Ads helps you reach your target users with precision and maximize acquisition of high-value audiences",
             s3_btn: "More Details",
-            s4_title_line1: "Efficient Monetization and Revenue Increase",
-            s4_title_line2: "",
+            s4_title_line1: "Efficient Monetization",
+            s4_title_line2: "and Revenue Increase",
             s4_desc: "Powered by premium global ad resources and close collaborations with top-tier ad vendors, we help you boost revenue effortlessly while maintaining an excellent user experience",
             s4_btn: "More Details",
             s5_title: "Diverse Ad Formats for a Unique Experience",
@@ -279,8 +279,8 @@ const translations = {
             s4_btn: "Start Now"
         },
         publisher: {
-            s1_title_line1: "Efficient Monetization and Revenue Increase",
-            s1_title_line2: "",
+            s1_title_line1: "Efficient Monetization",
+            s1_title_line2: "and Revenue Increase",
             s1_desc: "Powered by premium global ad resources and close collaborations with top-tier ad vendors, we help you boost revenue effortlessly while maintaining an excellent user experience",
             s1_btn: "More Details",
             s2_title_sub: "Who We Are:",

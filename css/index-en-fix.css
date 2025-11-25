@@ -96,8 +96,8 @@ html[lang="en"] .s3-btn-text {
 
 /* Section 4 标题调整 */
 html[lang="en"] .section-4-title {
-    width: 900px !important; /* 调整宽度以控制换行 */
-    height: 110px !important; /* 改为单行高度 */
+    width: 1200px !important; /* 增大宽度以容纳两行标题 */
+    height: auto !important; /* 高度自适应两行 */
 }
 
 html[lang="en"] .s4-title-line1 {
@@ -106,16 +106,19 @@ html[lang="en"] .s4-title-line1 {
 }
 
 html[lang="en"] .s4-title-line2 {
-    display: none !important; /* line2为空，隐藏 */
+    display: block !important; /* 显示第二行 */
+    white-space: nowrap !important; /* 不换行 */
+    line-height: 1.2 !important;
 }
 
 /* Section 4 描述文字和按钮下移 */
 html[lang="en"] .section-4-desc {
-    top: 180px !important; /* 标题高度变小，上移描述文字 */
+    top: 280px !important; /* 下移描述文字 */
+    width: 500px !important; /* 增大文字框宽度 */
 }
 
 html[lang="en"] .section-4-btn {
-    top: 450px !important; /* 上移按钮，但需略微下移以避开文字 */
+    top: 490px !important; /* 再上移按钮 */
 }
 
 /* Section 4 按钮文字缩小 */
@@ -269,8 +272,8 @@ html[lang="en"] .section-7-text {
     }
     
     html[lang="en"] .section-4-title {
-        width: 46.88vw !important; /* 900/1920 */
-        height: 5.73vw !important; /* 110/1920 */
+        width: 62.5vw !important; /* 1200/1920 */
+        height: auto !important; /* 高度自适应两行 */
     }
     
     html[lang="en"] .s4-title-line1 {
@@ -279,15 +282,18 @@ html[lang="en"] .section-7-text {
     }
     
     html[lang="en"] .s4-title-line2 {
-        display: none !important; /* line2为空，隐藏 */
+        display: block !important; /* 显示第二行 */
+        white-space: nowrap !important; /* 不换行 */
+        line-height: 1.2 !important;
     }
     
     html[lang="en"] .section-4-desc {
-        top: 9.38vw !important; /* 180/1920 */
+        top: 14.58vw !important; /* 280/1920 */
+        width: 26.04vw !important; /* 500/1920 */
     }
     
     html[lang="en"] .section-4-btn {
-        top: 23.44vw !important; /* 450/1920 */
+        top: 25.52vw !important; /* 490/1920 */
     }
     
     html[lang="en"] .s4-btn-text {
