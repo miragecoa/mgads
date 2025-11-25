@@ -45,9 +45,9 @@ var footerHTML = '\
         \
         <div class="footer-social">\
             <a href="https://discord.com/invite/rxCTxr2gN4" class="social-link" target="_blank"><img src="切图/1.png" alt="社交媒体1"></a>\
-            <a href="javascript:void(0)" class="social-link"><img src="切图/2.png" alt="社交媒体2"></a>\
-            <a href="https://www.linkedin.com/company/miracle-games-inc/" class="social-link" target="_blank"><img src="切图/3.png" alt="社交媒体3"></a>\
-            <a href="javascript:void(0)" class="social-link"><img src="切图/4.png" alt="社交媒体4"></a>\
+            <a href="https://x.com/mguwp" class="social-link"><img src="切图/2.png" alt="社交媒体2"></a>\
+            <a href="https://www.facebook.com/MiracleGamesINC" class="social-link" target="_blank"><img src="切图/3.png" alt="社交媒体3"></a>\
+            <a href="https://www.linkedin.com/company/miracle-games-inc/" class="social-link"><img src="切图/4.png" alt="社交媒体4"></a>\
         </div>\
         \
         <div class="footer-divider"></div>\

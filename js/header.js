@@ -132,8 +132,8 @@ function highlightCurrentPage() {
          navLinks.forEach(function(link) {
             var href = link.getAttribute('href');
              if (href && href.indexOf(bodyPage + '.html') !== -1) {
-                link.classList.add('active');
-            }
+            link.classList.add('active');
+        }
     });
     }
 }
