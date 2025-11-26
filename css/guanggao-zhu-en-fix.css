@@ -98,6 +98,11 @@ html[lang="en"] .section-2-desc {
     }
 }
 
+/* Section 3 整个文字框容器下移 */
+html[lang="en"] .section-3-frames {
+    top: 570px !important; /* 原518px，下移52px */
+}
+
 /* Section 3 Frame 标题位置调整 */
 html[lang="en"] .frame-1 .frame-title {
     top: 35px !important; /* 原30px，下移5px */
@@ -117,6 +122,10 @@ html[lang="en"] .frame-3 .frame-title {
 }
 
 @media screen and (max-width: 1920px) {
+    html[lang="en"] .section-3-frames {
+        top: 29.69vw !important; /* 570/1920 */
+    }
+    
     html[lang="en"] .frame-1 .frame-title {
         top: 1.82vw !important; /* 35/1920 */
     }

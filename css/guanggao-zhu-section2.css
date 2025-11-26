@@ -97,8 +97,7 @@
 }
 
 .section-2-small-box.animate-in {
-    animation: floatUpDown 3s ease-in-out infinite;
-    animation-delay: 0s;
+    /* Animation removed */
 }
 
 .s2-small-box-title {
@@ -169,23 +168,19 @@
 }
 
 .section-2-card.animate-in.card-1 {
-    animation: floatUpDown 3s ease-in-out infinite;
-    animation-delay: 0.3s;
+    /* Animation removed */
 }
 
 .section-2-card.animate-in.card-2 {
-    animation: floatUpDown 3s ease-in-out infinite;
-    animation-delay: 0.6s;
+    /* Animation removed */
 }
 
 .section-2-card.animate-in.card-3 {
-    animation: floatUpDown 3s ease-in-out infinite;
-    animation-delay: 0.9s;
+    /* Animation removed */
 }
 
 .section-2-card.animate-in.card-4 {
-    animation: floatUpDown 3s ease-in-out infinite;
-    animation-delay: 1.2s;
+    /* Animation removed */
 }
 
 /* 卡片内的图片 - 定位在右下角 */

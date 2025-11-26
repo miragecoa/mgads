@@ -49,7 +49,7 @@ html[lang="en"] .section-1-desc p {
 /* Section 1 按钮调整位置，与描述文字对齐 */
 html[lang="en"] .section-1-content .section-1-btn,
 html[lang="en"] .section-1-btn {
-    top: 610px !important; /* 下移按钮 */
+    top: 660px !important; /* 下移按钮 */
     position: absolute !important; /* 确保绝对定位 */
 }
 
@@ -91,7 +91,7 @@ html[lang="en"] .section-1-btn .btn-text {
     
     html[lang="en"] .section-1-content .section-1-btn,
     html[lang="en"] .section-1-btn {
-        top: 31.77vw !important; /* 610/1920 */
+        top: 34.38vw !important; /* 660/1920 */
         position: absolute !important; /* 确保绝对定位 */
     }
     
@@ -114,16 +114,22 @@ html[lang="en"] .section-2-desc {
     white-space: nowrap !important; /* 不换行 */
 }
 
+/* Section 2 两个文字框容器下移 */
+html[lang="en"] .section-2-boxes {
+    top: 580px !important; /* 下移50px */
+}
+
 html[lang="en"] .section-2-title .title-main span {
     display: inline !important;
     white-space: normal !important;
 }
 
-/* Section 2 框内文字缩小 */
+/* Section 2 框内文字缩小并增加左边间隔 */
 html[lang="en"] .section-2-text-1,
 html[lang="en"] .section-2-text-2 {
     font-size: 20px !important; /* 缩小字体 */
     line-height: 1.5 !important;
+    left: 180px !important; /* 增加左边间隔，原156px */
 }
 
 /* Section 3 标题主文本换行 - 与 Section 2 相同的处理方式 */
@@ -158,6 +164,10 @@ html[lang="en"] .section-3-desc {
         white-space: nowrap !important; /* 不换行 */
     }
     
+    html[lang="en"] .section-2-boxes {
+        top: 30.21vw !important; /* 580/1920 */
+    }
+    
     html[lang="en"] .section-2-title .title-main span {
         display: inline !important;
         white-space: normal !important;
@@ -167,6 +177,7 @@ html[lang="en"] .section-3-desc {
     html[lang="en"] .section-2-text-2 {
         font-size: 1.04vw !important; /* 20/1920 */
         line-height: 1.5 !important;
+        left: 9.38vw !important; /* 180/1920 - 增加左边间隔 */
     }
     
     html[lang="en"] .section-3-title .title-main {
@@ -187,7 +198,11 @@ html[lang="en"] .section-3-desc {
     }
 }
 
-/* Section 4 框内文字缩小 */
+/* Section 4 框内文字缩小并增加左边间隔 */
+html[lang="en"] .section-4-frames .frame-content {
+    padding-left: 40px !important; /* 增加左边间隔，原15px */
+}
+
 html[lang="en"] .section-4-frames .frame-title {
     font-size: 20px !important; /* 缩小标题字体 */
 }
@@ -251,6 +266,10 @@ html[lang="en"] .section-5-title .title-main span {
 }
 
 @media screen and (max-width: 1920px) {
+    html[lang="en"] .section-4-frames .frame-content {
+        padding-left: 2.08vw !important; /* 40/1920 - 增加左边间隔 */
+    }
+    
     html[lang="en"] .section-4-frames .frame-title {
         font-size: 1.04vw !important; /* 20/1920 */
     }
@@ -336,7 +355,7 @@ html[lang="en"] .section-6-title {
     /* 确保大屏幕时按钮位置也生效 */
     html[lang="en"] .section-1-content .section-1-btn,
     html[lang="en"] .section-1-btn {
-        top: 550px !important; /* 按钮上移 */
+        top: 660px !important; /* 下移按钮 */
         position: absolute !important; /* 确保绝对定位 */
     }
 }

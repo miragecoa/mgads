@@ -148,6 +148,11 @@ body {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+    font-family: 'JiYingHuiPianYuan', sans-serif;
+    font-weight: 400;
+    font-size: 1.56vw; /* 30/1920 - 字体加大 */
+    color: #000000;
+    line-height: 1.6;
 }
 
 .section-1-desc.animate-in {
@@ -160,7 +165,7 @@ body {
     padding: 0;
     font-family: 'JiYingHuiPianYuan', sans-serif;
     font-weight: 400;
-    font-size: 1.25vw; /* 24/1920 */
+    font-size: 1.56vw; /* 30/1920 - 字体加大 */
     color: #000000;
     line-height: 1.6;
 }
@@ -521,7 +526,7 @@ body {
 .frame-content {
     position: relative;
     z-index: 2;
-    padding: 30px 15px; /* 减小左右内边距 */
+    padding: 30px 15px 30px 40px; /* 增加左内边距 */
 }
 
 .frame-title {
@@ -940,7 +945,7 @@ body section.section:last-of-type {
     }
 
     .frame-content {
-        padding: 1.56vw 0.78vw; /* 30, 15 */
+        padding: 1.56vw 0.78vw 1.56vw 2.08vw; /* 30, 15, 30, 40 - 增加左内边距 */
     }
 
     .frame-title {
@@ -1099,8 +1104,12 @@ body section.section:last-of-type {
         font-size: 100px;
     }
 
+    .section-1-desc {
+        font-size: 30px; /* 字体加大 */
+    }
+    
     .section-1-desc p {
-        font-size: 24px;
+        font-size: 30px; /* 字体加大 */
     }
     
     .title-sub {

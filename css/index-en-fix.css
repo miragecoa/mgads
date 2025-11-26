@@ -12,7 +12,7 @@ html[lang="en"] .section-1-desc {
 }
 
 html[lang="en"] .section-1-btn {
-    top: 786px !important;
+    top: 830px !important;
 }
 
 /* Section 2 标题居中，在"and"处换行 */
@@ -86,7 +86,7 @@ html[lang="en"] .section-3-desc {
 }
 
 html[lang="en"] .section-3-btn {
-    top: 566px !important; /* 原536px，下移30px */
+    top: 610px !important; /* 下移按钮 */
 }
 
 /* Section 3 按钮文字缩小 */
@@ -113,12 +113,12 @@ html[lang="en"] .s4-title-line2 {
 
 /* Section 4 描述文字和按钮下移 */
 html[lang="en"] .section-4-desc {
-    top: 280px !important; /* 下移描述文字 */
+    top: 330px !important; /* 下移描述文字 */
     width: 500px !important; /* 增大文字框宽度 */
 }
 
 html[lang="en"] .section-4-btn {
-    top: 490px !important; /* 再上移按钮 */
+    top: 570px !important; /* 下移按钮更多 */
 }
 
 /* Section 4 按钮文字缩小 */
@@ -196,7 +196,7 @@ html[lang="en"] .section-7-text {
     }
     
     html[lang="en"] .section-1-btn {
-        top: 40.94vw !important;
+        top: 43.23vw !important; /* 830/1920 */
     }
     
     html[lang="en"] .section-2-title {
@@ -264,7 +264,7 @@ html[lang="en"] .section-7-text {
     }
     
     html[lang="en"] .section-3-btn {
-        top: 29.48vw !important; /* 566/1920 */
+        top: 31.77vw !important; /* 610/1920 */
     }
     
     html[lang="en"] .s3-btn-text {
@@ -288,12 +288,12 @@ html[lang="en"] .section-7-text {
     }
     
     html[lang="en"] .section-4-desc {
-        top: 14.58vw !important; /* 280/1920 */
+        top: 17.19vw !important; /* 330/1920 */
         width: 26.04vw !important; /* 500/1920 */
     }
     
     html[lang="en"] .section-4-btn {
-        top: 25.52vw !important; /* 490/1920 */
+        top: 29.69vw !important; /* 570/1920 */
     }
     
     html[lang="en"] .s4-btn-text {

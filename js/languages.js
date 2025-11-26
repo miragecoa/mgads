@@ -301,7 +301,7 @@ const translations = {
             s3_card3_desc: "Developers worry that ads may impact app performance, startup speed, and visual design, potentially compromising the smooth experience expected from native Windows applications",
             s4_title_sub: "Strategic and Technical Alignment:",
             s4_title_main_prefix: "Why MG Ads Is the",
-            s4_title_main_suffix: "Perfect Choice",
+            s4_title_main_suffix: " Perfect Choice",
             s4_frame1_title: "1.Unmatched Ecosystem Fit:",
             s4_frame1_desc: "Optimized specifically for Windows, MG Ads supports a wide range of ad formats, including splash, banner, interstitial, video, native, and exit ads It also seamlessly adapts to complex scenarios such as tablet-to-desktop mode switching",
             s4_frame2_title: "2.Powerful Technical Inheritance and Microsoft Tech Stack Integration:",

@@ -292,23 +292,7 @@ body {
 .section-2-card.animate-in {
     opacity: 1;
     transform: translateY(0);
-    animation: floatUpDown 3s ease-in-out infinite;
-}
-
-.section-2-card.animate-in:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.section-2-card.animate-in:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-.section-2-card.animate-in:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-.section-2-card.animate-in:nth-child(4) {
-    animation-delay: 0.9s;
+    /* Animation removed */
 }
 
 .card-2-img {
