@@ -535,7 +535,7 @@ body {
 .section-4-desc {
     position: absolute;
     left: 175px;
-    top: 400px; /* 下移描述文字 */
+    top: 310px; /* 上移描述文字 */
     width: 346px;
     height: 114px;
     font-family: 'JiYingHuiPianYuan', sans-serif;
@@ -558,7 +558,7 @@ body {
     display: block;
     position: absolute;
     left: 176px;
-    top: 420px; /* 再上移按钮 */
+    top: 500px; /* 下移按钮 */
     width: 316px;
     height: 84px;
     background: #0078D7;
@@ -790,7 +790,7 @@ body {
 
     .section-4-desc {
         left: 9.11vw;
-        top: 20.83vw; /* 400/1920 */
+        top: 16.15vw; /* 310/1920 - 上移描述文字 */
         width: 18.02vw;
         height: 5.94vw;
         font-size: 1.30vw;
@@ -798,7 +798,7 @@ body {
 
     .section-4-btn {
         left: 9.17vw;
-        top: 21.88vw; /* 420/1920 */
+        top: 26.04vw; /* 500/1920 - 下移按钮 */
         width: 16.46vw;
         height: 4.38vw;
     }
